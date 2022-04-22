@@ -1,0 +1,110 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $layout-breakpoint-xlarge) {
+    min-height: 100vh;
+    flex-direction: row;
+  }
+
+  .textbox {
+    margin: 64px 0 0 0;
+    padding: 64px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px 0;
+
+    @media (min-width: $layout-breakpoint-large) {
+      padding: 96px 0;
+    }
+
+    @media (min-width: $layout-breakpoint-xlarge) {
+      padding: 0;
+      margin: 0 0 0 96px;
+      align-items: flex-start;
+      justify-content: center;
+      width: 100%;
+    }
+
+    @media (min-width: $layout-breakpoint-2xlarge) {
+      margin: 0 0 0 150px;
+    }
+
+    .titleholder {
+      text-align: center;
+
+      .title__row--2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media (min-width: $layout-breakpoint-xlarge) {
+          justify-content: left;
+        }
+
+        .line {
+          display: none;
+          width: 144px;
+          height: 8px;
+          background-color: black;
+          margin: 0 10px 0 0;
+
+          @media (min-width: $layout-breakpoint-xlarge) {
+            display: flex;
+          }
+        }
+      }
+
+      @media (min-width: $layout-breakpoint-xlarge) {
+        text-align: left;
+      }
+    }
+
+    .cta--1 {
+      display: flex;
+      align-items: center;
+      gap: 0 5px;
+      cursor: pointer;
+      transition: 0.3s;
+
+      @media (min-width: $layout-breakpoint-large) {
+        gap: 0 10px;
+
+        &:hover {
+          gap: 0 20px;
+        }
+      }
+
+      .iconholder {
+        display: flex;
+
+        .icon {
+          width: 20px;
+          height: 20px;
+          aspect-ratio: 1/1;
+
+          @media (min-width: $layout-breakpoint-medium) {
+            width: 24px;
+            height: 24px;
+          }
+
+          @media (min-width: $layout-breakpoint-2xlarge) {
+            width: 30px;
+            height: 30px;
+          }
+        }
+      }
+    }
+  }
+
+  .imageholder {
+    position: relative;
+    height: 280px;
+
+    @media (min-width: $layout-breakpoint-xlarge) {
+      width: 100%;
+      height: 100vh;
+    }
+  }
+}
