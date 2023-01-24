@@ -1,37 +1,72 @@
 "use client";
 import { FC, useEffect, useState } from "react";
 import Image from "next/image";
-import useWindowDimensions from "../lib/useWindowDimensions";
+
+const TitleText: FC<{ text: string; styles?: string }> = ({ text, styles }) => {
+  return (
+    <h1 className={`text-6xl md:text-8xl font-medium ${styles}`}>{text}</h1>
+  );
+};
 
 const HomePage: FC = () => {
-  const [width, setWidth] = useState(0);
-  const [height, setHeight] = useState(0);
-
-  const getDimensions = () => {
-    setWidth(window.innerWidth);
-    setHeight(window.innerHeight);
-  };
-
   return (
-    <main>
-      <div className="h-40 text-center">
-        <p>{width + "  " + height}</p>
-        <button onClick={getDimensions}>Get Dimensions</button>
-        <h2 className="text-2xl">Hemsundar Paranthaman</h2>
-        <h1 className="text-5xl">Front end</h1>
-        <h1 className="text-5xl">Developer</h1>
+    <section className="flex flex-col md:flex-row w-full hero--container">
+      <style jsx>{`
+        @media only screen and (min-width: 768px) {
+          .hero--container {
+            min-height: clamp(600px, 100vh, 800px);
+          }
+
+          .image--container {
+            background: red;
+            min-height: clamp(600px, 100vh, 800px);
+          }
+        }
+
+        .cta:hover::after {
+          width: 100%;
+        }
+
+        .cta::after {
+          content: "";
+          position: absolute;
+          width: 0;
+          height: 2px;
+          background: black;
+          bottom: -4px;
+          transition: 0.4s;
+        }
+      `}</style>
+
+      <div className="text-left py-20 px-4 md:text-left md:basis-1/2 md:w-1/2 lg:px-20 flex flex-col items-start justify-center">
+        <h2 className="text-2xl lg:text-3xl">Hemsundar Paranthaman</h2>
+        <TitleText text={"Front-end"} styles={`mt-4`} />
+        <TitleText text={"Developer "} styles={`ml-20`} />
+        <a className="cta relative cursor-pointer flex items-center mt-6 md:mt-8 lg:mt-10 gap-2 lg:gap-4">
+          <span className="text-2xl block">My Works</span>
+          <svg
+            width="31"
+            height="16"
+            viewBox="0 0 31 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M30.7071 8.70711C31.0976 8.31658 31.0976 7.68342 30.7071 7.29289L24.3431 0.928932C23.9526 0.538408 23.3195 0.538408 22.9289 0.928932C22.5384 1.31946 22.5384 1.95262 22.9289 2.34315L28.5858 8L22.9289 13.6569C22.5384 14.0474 22.5384 14.6805 22.9289 15.0711C23.3195 15.4616 23.9526 15.4616 24.3431 15.0711L30.7071 8.70711ZM0 9H30V7H0V9Z"
+              fill="black"
+            />
+          </svg>
+        </a>
       </div>
-      <div className="aspect-[1920/1280] relative w-full">
+      <div className="image--container md:basis=1/2 relative w-full md:w-1/2 h-80 md:h-full">
         <Image
-          src={"/mohammad-rahmani-8qEB0fTe9Vw-unsplash.jpg"}
+          src={"/glitch-lab-app-2d0Mk82TGI8-unsplash.jpg"}
           alt={"Developer hero image"}
           fill
+          objectFit="cover"
         />
       </div>
-      <div className="absolute z-10 top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 bg-white opacity-50 rounded-xl w-[80%] h-[10%]  flex items-center justify-center">
-        <h1>Site under construction.</h1>
-      </div>
-    </main>
+    </section>
   );
 };
 

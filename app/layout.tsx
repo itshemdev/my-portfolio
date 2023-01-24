@@ -10,7 +10,7 @@ export default function RootLayout({
   return (
     <html>
       <head></head>
-      <body className="max-w-screen-xl mx-auto">
+      <body className="max-w-[1680px] mx-auto">
         <Header />
         {children}
       </body>
