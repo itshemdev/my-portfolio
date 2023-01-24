@@ -1,15 +1,22 @@
 "use client";
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import Image from "next/image";
 import useWindowDimensions from "../lib/useWindowDimensions";
 
 const HomePage: FC = () => {
-  const { height, width } = useWindowDimensions();
+  const [width, setWidth] = useState(0);
+  const [height, setHeight] = useState(0);
+
+  const getDimensions = () => {
+    setWidth(window.innerWidth);
+    setHeight(window.innerHeight);
+  };
 
   return (
     <main>
       <div className="h-40 text-center">
-        <p>{height + " " + width}</p>
+        <p>{width + "  " + height}</p>
+        <button onClick={getDimensions}>Get Dimensions</button>
         <h2 className="text-2xl">Hemsundar Paranthaman</h2>
         <h1 className="text-5xl">Front end</h1>
         <h1 className="text-5xl">Developer</h1>
