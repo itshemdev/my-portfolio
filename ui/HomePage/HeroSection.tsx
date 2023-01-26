@@ -53,7 +53,7 @@ const HeroSection = () => {
       </div>
       <div className="image--container md:basis=1/2 relative w-full md:w-1/2 h-80 md:h-full">
         <Image
-          src={"/glitch-lab-app-2d0Mk82TGI8-unsplash.jpg"}
+          src={"/hero-image.jpg"}
           alt={"Developer hero image"}
           fill
           className="object-cover"
