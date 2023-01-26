@@ -23,7 +23,7 @@ export default function RootLayout({
         />
         <meta
           property="og:image"
-          content={`https://hemdev.vercel.app/_next/image?url=%2Fglitch-lab-app-2d0Mk82TGI8-unsplash.jpg&w=768&q=75`}
+          content={`https://hemdev.vercel.app/hero-image.jpg`}
         />
 
         <meta name="twitter:card" content="summary_large_image" />
@@ -37,8 +37,13 @@ export default function RootLayout({
         />
         <meta
           property="twitter:image"
-          content={`https://hemdev.vercel.app/_next/image?url=%2Fglitch-lab-app-2d0Mk82TGI8-unsplash.jpg&w=768&q=75`}
+          content={`https://hemdev.vercel.app/hero-image.jpg`}
         />
+
+        <meta property="og:image:width" content="300" />
+        <meta property="og:image:height" content="300" />
+
+        <meta property="og:url" content="http://www.hemdev.vercel.app" />
       </head>
       <body className="max-w-[1680px] mx-auto">
         {/* <Header /> */}
