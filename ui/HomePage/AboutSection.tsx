@@ -17,7 +17,7 @@ const AboutSection: FC = () => {
   };
 
   return (
-    <section className="px-4 py-10 lg:px-20 lg:py-20 flex gap-10 flex-col md:flex-row md:items-start lg:gap-16">
+    <section className="px-4 pt-10 lg:px-20 lg:pt-28 flex gap-10 flex-col md:flex-row md:items-start lg:gap-16">
       <div className="md:basis-2/6 w-full relative max-w-xl aspect-square ">
         <Image
           src={"/my-photo.jpg"}
