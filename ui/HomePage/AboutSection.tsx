@@ -36,13 +36,13 @@ const AboutSection: FC = () => {
         />
       </div>
       <div className="md:basis-4/6 w-full">
-        <p className="text-3xl md:text-3xl lg:text-4xl leading-[40px] md:leading-[50px] lg:leading-[55px]">
+        <p className="text-3xl md:text-3xl xl:text-4xl leading-[40px] md:leading-[50px] lg:leading-[55px]">
           I am Hemsundar Paranthaman, a student at Hindustan College of Arts and
           Science. I have been learning web for the past 2 years. I work as a
           junior developer at a startup, JadeCore, where I apply my knowledge
           and skills in a real-world project.
         </p>
-        <p className="mt-10 text-3xl md:text-3xl lg:text-4xl leading-[40px] md:leading-[50px] lg:leading-[55px]">
+        <p className="mt-10 text-3xl md:text-3xl xl:text-4xl leading-[40px] md:leading-[50px] lg:leading-[55px]">
           I have hands-on experience in web development and I am passionate
           about staying updated with the latest technologies and trends.
         </p>

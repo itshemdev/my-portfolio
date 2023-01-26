@@ -23,7 +23,7 @@ export default function RootLayout({
         />
         <meta
           property="og:image"
-          content={`https://hemdev.vercel.app/hero-image.jpg`}
+          content={`https://hemdev.vercel.app/hero-image-compressed.jpeg`}
         />
 
         <meta name="twitter:card" content="summary_large_image" />
@@ -37,7 +37,7 @@ export default function RootLayout({
         />
         <meta
           property="twitter:image"
-          content={`https://hemdev.vercel.app/hero-image.jpg`}
+          content={`https://hemdev.vercel.app/hero-image-compressed.jpeg`}
         />
 
         <meta property="og:image:width" content="300" />
