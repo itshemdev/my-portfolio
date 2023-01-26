@@ -9,7 +9,7 @@ const AboutSection: FC = () => {
     return (
       <div className="flex flex-col justify-center items-center gap-2">
         <div className="relative aspect-square w-16">
-          <Image src={imageUrl} alt={"Logo"} fill objectFit="cover" />
+          <Image src={imageUrl} alt={"Logo"} fill />
         </div>
         <span className="text-xl">{name}</span>
       </div>
@@ -17,12 +17,12 @@ const AboutSection: FC = () => {
   };
 
   return (
-    <section className="px-4 py-10 lg:px-20 lg:py-20 flex gap-10 flex-col md:flex-row md:items-start">
+    <section className="px-4 py-10 lg:px-20 lg:py-20 flex gap-10 flex-col md:flex-row md:items-start lg:gap-16">
       <div className="md:basis-2/6 w-full relative max-w-xl aspect-square ">
         <Image
           src={"/my-photo.jpg"}
           alt={"My Photo"}
-          objectFit="contain"
+          className="object-cover"
           fill
         />
       </div>
@@ -33,13 +33,62 @@ const AboutSection: FC = () => {
           passionate about improving web design and continuously learning new
           things to ensure I offer you the best.
         </p>
-        <h2 className="text-3xl md:text-4xl mt-10">Technologies I use:</h2>
-        <div className="flex">
-          <IconCard imageUrl={"/react-logo.png"} name={"React"} />
-          <IconCard
-            imageUrl={"/9118036_nextjs_fill_icon.png"}
-            name={"Nextjs"}
-          />
+        <h2 className="text-4xl md:text-4xl mt-10 font-semibold">Skills</h2>
+        <div className="h-0.5 w-full bg-black mt-4" />
+        <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div>
+            <h3 className="text-3xl">Front-end Technologies</h3>
+            <div className="flex flex-col mt-2">
+              {["HTML, CSS, Javascript", "Typescript", "React", "Nextjs"].map(
+                (value) => {
+                  return (
+                    <div key={value} className={`flex items-center gap-2`}>
+                      <div
+                        className={`w-2 h-2 rounded-full aspect-square bg-black`}
+                      />
+                      <span key={value} className={`text-2xl font-light`}>
+                        {value}
+                      </span>
+                    </div>
+                  );
+                }
+              )}
+            </div>
+          </div>
+          <div>
+            <h3 className="text-3xl">CMS</h3>
+            <div className="flex flex-col mt-2">
+              {["Sanity"].map((value) => {
+                return (
+                  <div key={value} className={`flex items-center gap-2`}>
+                    <div
+                      className={`w-2 h-2 rounded-full aspect-square bg-black`}
+                    />
+                    <span key={value} className={`text-2xl font-light`}>
+                      {value}
+                    </span>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+          <div>
+            <h3 className="text-3xl">Mobile Development</h3>
+            <div className="flex flex-col mt-2">
+              {["Dart", "Flutter"].map((value) => {
+                return (
+                  <div key={value} className={`flex items-center gap-2`}>
+                    <div
+                      className={`w-2 h-2 rounded-full aspect-square bg-black`}
+                    />
+                    <span key={value} className={`text-2xl font-light`}>
+                      {value}
+                    </span>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </div>
     </section>

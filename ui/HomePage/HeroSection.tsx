@@ -56,7 +56,7 @@ const HeroSection = () => {
           src={"/glitch-lab-app-2d0Mk82TGI8-unsplash.jpg"}
           alt={"Developer hero image"}
           fill
-          objectFit="cover"
+          className="object-cover"
         />
       </div>
     </section>
