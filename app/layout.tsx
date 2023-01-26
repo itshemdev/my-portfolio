@@ -9,9 +9,11 @@ export default function RootLayout({
 }) {
   return (
     <html>
-      <head></head>
+      <head>
+        <title>Hem | Developer</title>
+      </head>
       <body className="max-w-[1680px] mx-auto">
-        <Header />
+        {/* <Header /> */}
         {children}
       </body>
     </html>

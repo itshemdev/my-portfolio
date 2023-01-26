@@ -18,20 +18,20 @@ const WorksSection = () => {
       >
         <div className="relative w-full aspect-square">
           <Image
-            src={"/the-awm.png"}
-            alt={"The AWM website cover image"}
+            src={imageUrl}
+            alt={title}
             fill
             className={"aspect-sqaure w-full object-cover h-80"}
           />
         </div>
         <div className="mt-2 flex items-center justify-between">
           <div>
-            <div className="text-2xl">The AWM</div>
-            <div>Development</div>
+            <div className="text-xl font-medium md:text-2xl">{title}</div>
+            <div className="text-sm md:text-xl">{subTitle}</div>
           </div>
           <div className="flex gap-2">
             {githubUrl && (
-              <a href={githubUrl} className="relative h-10 aspect-square">
+              <a href={githubUrl} className="relative h-8 aspect-square">
                 <Image
                   src={"/211904_social_github_icon.png"}
                   alt={"Github icon"}
@@ -39,7 +39,7 @@ const WorksSection = () => {
                 />
               </a>
             )}
-            <a href={url} className="relative h-10 aspect-square">
+            <a href={url} className="relative h-8 aspect-square">
               <Image
                 src={"/4829868_arrow_right_up_icon.png"}
                 alt={"Github icon"}
@@ -61,13 +61,13 @@ const WorksSection = () => {
           title={"The AWM"}
           subTitle={"Development"}
           url={"www.the-awm.com"}
-          imageUrl=""
+          imageUrl="/the-awm.png"
         />
         <WorkCard
           isEven={true}
           title="My Portfolio"
           subTitle="Design + Development"
-          imageUrl=""
+          imageUrl="/my-portfolio.png"
           githubUrl="https://github.com/Hemsundar15/my-portfolio"
           url="https://hemdev.vercel.app"
         />
