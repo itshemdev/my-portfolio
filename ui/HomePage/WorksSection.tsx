@@ -31,7 +31,11 @@ const WorksSection = () => {
           </div>
           <div className="flex gap-2">
             {githubUrl && (
-              <a href={githubUrl} className="relative h-8 aspect-square">
+              <a
+                href={githubUrl}
+                className="relative h-8 aspect-square"
+                rel={"noreferrer"}
+              >
                 <Image
                   src={"/211904_social_github_icon.png"}
                   alt={"Github icon"}
@@ -39,7 +43,12 @@ const WorksSection = () => {
                 />
               </a>
             )}
-            <a href={url} className="relative h-8 aspect-square">
+            <a
+              href={url}
+              className="relative h-8 aspect-square"
+              target={"_blank"}
+              rel={"noreferrer"}
+            >
               <Image
                 src={"/4829868_arrow_right_up_icon.png"}
                 alt={"Github icon"}
@@ -53,14 +62,14 @@ const WorksSection = () => {
   };
 
   return (
-    <section className="px-4 py-10 lg:px-20 lg:py-20">
+    <section className="px-4 pt-10 lg:px-20 lg:pt-20 xl:pt-32">
       <h2 className="text-5xl md:text-6xl font-medium">My Works</h2>
 
       <div className="w-full flex flex-col md:flex-row gap-10 lg:gap-16 mt-10">
         <WorkCard
           title={"The AWM"}
           subTitle={"Development"}
-          url={"www.the-awm.com"}
+          url={"https://www.the-awm.com"}
           imageUrl="/the-awm.png"
         />
         <WorkCard

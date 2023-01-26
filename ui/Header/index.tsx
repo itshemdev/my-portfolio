@@ -19,7 +19,7 @@ const Header: FC = () => {
   ];
 
   return (
-    <header className="flex fixed justify-between items-center h-10">
+    <header className="flex fixed justify-between items-center h-10 z-100">
       <Link href={"/"} className="text-2xl">
         hem.
       </Link>
