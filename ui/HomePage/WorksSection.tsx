@@ -1,7 +1,7 @@
 import { url } from "inspector";
 import Image from "next/image";
-import Link from "next/link";
 import { FC } from "react";
+import { Link, Element } from "react-scroll";
 
 const WorksSection = () => {
   const WorkCard: FC<{
@@ -14,6 +14,7 @@ const WorksSection = () => {
   }> = ({ title, subTitle, githubUrl, url, imageUrl, isEven }) => {
     return (
       <div
+        id="worksSection"
         className={`basis-full md:basis-1/2 ${isEven && "md:mt-20 lg:mt-40"}`}
       >
         <div className="relative w-full aspect-square">
