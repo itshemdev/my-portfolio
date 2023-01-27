@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-head-element */
-import Header from "../ui/Header";
 import "../styles/globals.css";
+import Header from "../ui/Header";
+import Footer from "../ui/Footer";
 
 export default function RootLayout({
   children,
@@ -48,6 +49,7 @@ export default function RootLayout({
       <body className="max-w-[1680px] mx-auto">
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
