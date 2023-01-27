@@ -47,7 +47,7 @@ export default function RootLayout({
         <meta property="og:url" content="http://www.hemdev.vercel.app" />
       </head>
       <body className="max-w-[1680px] mx-auto">
-        <Header />
+        {/* <Header /> */}
         {children}
         <Footer />
       </body>

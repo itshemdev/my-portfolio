@@ -19,10 +19,10 @@ const Footer = () => {
   };
 
   return (
-    <footer className="px-4 mt-10 bg-black text-white py-20 flex flex-col items-start lg:px-20">
+    <footer className="px-4 mt-10 bg-black text-white py-20 flex flex-col items-start lg:px-20 lg:mt-20 xl:mt-28">
       <h2 className="text-4xl md:text-5xl xl:text-6xl">Get in touch.</h2>
       <a
-        className="mt-4 block text-2xl relative after:content-[''] after:w-0 after:h-0.5 after:left-0 hover:after:w-full after:bottom-[-2px] after:bg-white after:absolute after:transition-all md:text-4xl md:mt-6"
+        className="mt-4 text-sm sm:text-xl md:text-3xl lg:text-4xl relative after:content-[''] after:w-0 after:h-0.5 after:left-0 hover:after:w-full after:bottom-[-2px] after:bg-white after:absolute after:transition-all md:mt-6 break-words inline-block"
         href="mailto:hemsundar.paranthaman@outlook.com"
       >
         hemsundar.paranthaman@outlook.com
