@@ -5,13 +5,13 @@ import { Link } from "react-scroll";
 const HeroSection = () => {
   return (
     <section className="flex flex-col md:flex-row w-full hero--container">
-      <div className="text-left py-20 px-4 md:text-left md:basis-1/2 md:w-1/2 lg:px-20 flex flex-col items-start justify-center">
+      <div className="text-left py-28 px-4 md:text-left md:basis-1/2 md:w-1/2 lg:px-20 flex flex-col items-start justify-center">
         <h2 className="text-2xl lg:text-3xl">Hemsundar Paranthaman</h2>
         <TitleText text={"Front-end"} styles={`mt-4`} />
         <TitleText text={"Developer "} styles={`ml-20`} />
         <Link
           to="worksSection"
-          offset={-150}
+          offset={-130}
           duration={1000}
           smooth={true}
           className="cta relative cursor-pointer flex items-center mt-6 md:mt-8 lg:mt-10 gap-2 lg:gap-4"
