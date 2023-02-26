@@ -51,7 +51,7 @@ const WorksSection = () => {
               rel={"noreferrer"}
             >
               <Image
-                src={"/4829868_arrow_right_up_icon.png"}
+                src={"/icons/4829868_arrow_right_up_icon.png"}
                 alt={"Github icon"}
                 fill
               />
