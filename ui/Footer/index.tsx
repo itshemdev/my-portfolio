@@ -29,11 +29,11 @@ const Footer = () => {
       </a>
       <div className="flex mt-6 gap-6 lg:mt-8">
         <Icon
-          link={"https://github.com/Hemsundar15"}
+          link={"https://github.com/itshemdev"}
           imageUrl={"/icons/github-icon-white.png"}
         />
         <Icon
-          link={"https://twitter.com/hemsundar_pa"}
+          link={"https://twitter.com/itshemdev"}
           imageUrl={"/icons/icons8-twitter-240.png"}
         />
       </div>

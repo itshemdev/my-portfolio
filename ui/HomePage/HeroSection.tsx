@@ -7,7 +7,7 @@ const HeroSection = () => {
     <section className="flex flex-col md:flex-row w-full hero--container">
       <div className="text-left py-28 px-4 md:text-left md:basis-1/2 md:w-1/2 lg:px-20 flex flex-col items-start justify-center">
         <h2 className="text-2xl lg:text-3xl">Hemsundar Paranthaman</h2>
-        <TitleText text={"Front-end"} styles={`mt-4`} />
+        <TitleText text={"Full-stack"} styles={`mt-4`} />
         <TitleText text={"Developer "} styles={`ml-12 md:ml-16 lg:ml-20`} />
         <Link
           to="worksSection"
