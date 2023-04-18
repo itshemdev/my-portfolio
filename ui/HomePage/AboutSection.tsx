@@ -54,7 +54,7 @@ const AboutSection: FC = () => {
         <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-10">
           <SkillContainer
             title="Front-end technologies"
-            skills={["HTML, CSS, Javascript", "Typescript", "React", "Nextjs"]}
+            skills={["HTML, CSS, Javascript", "React", "Nextjs"]}
           />
           <SkillContainer
             title="Back-end technologies"
@@ -64,10 +64,9 @@ const AboutSection: FC = () => {
             title="Mobile Development"
             skills={["Dart", "Flutter", "Material Design"]}
           />
-          <SkillContainer title="CMS" skills={["Sanity"]} />
           <SkillContainer
             title="Others"
-            skills={["VS Code", "Git", "GitHub"]}
+            skills={["VS Code", "Sanity", "Git", "GitHub"]}
           />
         </div>
       </div>
