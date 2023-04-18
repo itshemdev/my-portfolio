@@ -17,8 +17,7 @@ export default function RootLayout({
         <meta property="og:title" content={"Hem | Developer"} />
         <meta
           property="og:description"
-          content={`I'm Hemsundar, a freelancer based in India. I specialize in
-         designing and developing Front-end web experiences. I am very passionate
+          content={`I'm Hemsundar, a freelancer based in India. I am hybrid develper who is specialized in developing front-end, back-end as well as mobile experiences. I am very passionate
          about improving web design and continuously learning new things to
          ensure I offer you the best.`}
         />
