@@ -29,7 +29,7 @@ const AboutSection: FC = () => {
     <section className="px-4 pt-10 lg:px-20 lg:pt-28 flex gap-10 flex-col md:flex-row md:items-start lg:gap-16">
       <div className="md:basis-2/6 w-full relative max-w-xl aspect-square ">
         <Image
-          src={"/my-photo.jpg"}
+          src={"/me-1.jpeg"}
           alt={"My Photo"}
           className="object-cover"
           fill
@@ -56,11 +56,15 @@ const AboutSection: FC = () => {
             title="Front-end technologies"
             skills={["HTML, CSS, Javascript", "Typescript", "React", "Nextjs"]}
           />
-          <SkillContainer title="CMS" skills={["Sanity"]} />
+          <SkillContainer
+            title="Back-end technologies"
+            skills={["Nodejs", "Express", "MySql"]}
+          />
           <SkillContainer
             title="Mobile Development"
             skills={["Dart", "Flutter", "Material Design"]}
           />
+          <SkillContainer title="CMS" skills={["Sanity"]} />
           <SkillContainer
             title="Others"
             skills={["VS Code", "Git", "GitHub"]}

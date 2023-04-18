@@ -30,11 +30,11 @@ const Footer = () => {
       <div className="flex mt-6 gap-6 lg:mt-8">
         <Icon
           link={"https://github.com/itshemdev"}
-          imageUrl={"/icons/github-icon-white.png"}
+          imageUrl={"/icons/github-light-icon.png"}
         />
         <Icon
           link={"https://twitter.com/itshemdev"}
-          imageUrl={"/icons/icons8-twitter-240.png"}
+          imageUrl={"/icons/twitter-icon.png"}
         />
       </div>
     </footer>

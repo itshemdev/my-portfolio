@@ -38,7 +38,7 @@ const WorksSection = () => {
                 rel={"noreferrer"}
               >
                 <Image
-                  src={"/icons/211904_social_github_icon.png"}
+                  src={"/icons/github-dark-icon.png"}
                   alt={"Github icon"}
                   fill
                 />
@@ -50,11 +50,7 @@ const WorksSection = () => {
               target={"_blank"}
               rel={"noreferrer"}
             >
-              <Image
-                src={"/icons/4829868_arrow_right_up_icon.png"}
-                alt={"Github icon"}
-                fill
-              />
+              <Image src={"/icons/arrow-icon.png"} alt={"Github icon"} fill />
             </a>
           </div>
         </div>
