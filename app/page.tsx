@@ -9,8 +9,8 @@ const HomePage: FC = () => {
   return (
     <Fragment>
       <HeroSection />
-      <AboutSection />
       <WorksSection />
+      <AboutSection />
     </Fragment>
   );
 };

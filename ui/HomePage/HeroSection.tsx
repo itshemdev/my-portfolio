@@ -1,6 +1,7 @@
 import TitleText from "../Common/TitleText";
 import Image from "next/image";
 import { Link } from "react-scroll";
+import ArrowIcon from "./../Common/icons/arrowIcon.svg";
 
 const HeroSection = () => {
   return (
@@ -8,7 +9,11 @@ const HeroSection = () => {
       <div className="text-left py-28 px-4 md:text-left md:basis-1/2 md:w-1/2 lg:px-20 flex flex-col items-start justify-center">
         <h2 className="text-2xl lg:text-3xl">Hemsundar Paranthaman</h2>
         <TitleText text={"Full-stack"} styles={`mt-4`} />
-        <TitleText text={"Developer "} styles={`ml-12 md:ml-16 lg:ml-20`} />
+        <TitleText
+          text={"Developer "}
+          styles={`ml-12 md:ml-16 lg:ml-20`}
+          delay={0.15}
+        />
         <Link
           to="worksSection"
           offset={-130}
@@ -17,18 +22,7 @@ const HeroSection = () => {
           className="cta relative cursor-pointer flex items-center mt-6 md:mt-8 lg:mt-10 gap-2 lg:gap-4"
         >
           <span className="text-2xl block">My Works</span>
-          <svg
-            width="31"
-            height="16"
-            viewBox="0 0 31 16"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M30.7071 8.70711C31.0976 8.31658 31.0976 7.68342 30.7071 7.29289L24.3431 0.928932C23.9526 0.538408 23.3195 0.538408 22.9289 0.928932C22.5384 1.31946 22.5384 1.95262 22.9289 2.34315L28.5858 8L22.9289 13.6569C22.5384 14.0474 22.5384 14.6805 22.9289 15.0711C23.3195 15.4616 23.9526 15.4616 24.3431 15.0711L30.7071 8.70711ZM0 9H30V7H0V9Z"
-              fill="black"
-            />
-          </svg>
+          <ArrowIcon />
         </Link>
       </div>
       <div className="image--container md:basis=1/2 relative w-full md:w-1/2 h-80 md:h-full">
