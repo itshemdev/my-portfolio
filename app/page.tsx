@@ -30,8 +30,8 @@ const WorkCard = ({
 const HomePage = () => {
   return (
     <main>
-      <section className="text mt-16 py-16 px-2 text-left">
-        <h1 className="text-5xl text-black/80 leading-[54px]">
+      <section className="text mt-16 py-20 px-2 text-left">
+        <h1 className="text-4xl text-black/80 leading-[44px]">
           Hey, I'm <span className="text-black/100">Hemsundar Paranthaman</span>, a{' '}
           <span className="text-black/100">full-stack</span> developer based in India.
         </h1>
