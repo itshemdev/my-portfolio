@@ -1,55 +1,16 @@
-/* eslint-disable @next/next/no-head-element */
 import "../styles/globals.css";
-import Header from "../ui/Header";
-import Footer from "../ui/Footer";
+import Header from "./_components/header";
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
-    <html>
-      <head>
-        <title>Hem | Developer</title>
-
-        <meta property="og:type" content="article" />
-        <meta property="og:title" content={"Hem | Developer"} />
-        <meta
-          property="og:description"
-          content={`I'm Hemsundar, a freelancer based in India. I am hybrid develper who is specialized in developing front-end, back-end as well as mobile experiences. I am very passionate
-         about improving web design and continuously learning new things to
-         ensure I offer you the best.`}
-        />
-        <meta
-          property="og:image"
-          content={`https://hemdev.vercel.app/hero-image-compressed.jpeg`}
-        />
-
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:title" content={"Hem | Developer"} />
-        <meta
-          property="twitter:description"
-          content={`I'm Hemsundar, a freelancer based in India. I specialize in
-          designing and developing Front-end web experiences. I am very passionate
-          about improving web design and continuously learning new things to
-          ensure I offer you the best.`}
-        />
-        <meta
-          property="twitter:image"
-          content={`https://hemdev.vercel.app/hero-image-compressed.jpeg`}
-        />
-
-        <meta property="og:image:width" content="300" />
-        <meta property="og:image:height" content="300" />
-
-        <meta property="og:url" content="http://www.hemdev.vercel.app" />
-      </head>
-      <body className="max-w-[1680px] mx-auto">
-        {/* <Header /> */}
-        {children}
-        <Footer />
-      </body>
+    <html lang="en">
+      <body>
+        <Header />
+        {children}</body>
     </html>
-  );
+  )
 }
