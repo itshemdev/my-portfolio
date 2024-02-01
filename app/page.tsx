@@ -13,7 +13,7 @@ const WorkCard = ({
   link: string;
 }) => {
   return (
-    <div>
+    <div className="mt-10">
       <div className="relative w-full h-full aspect-square">
         <Image src={imageUrl} alt={title} fill style={{ objectFit: 'cover' }} />
       </div>
@@ -30,7 +30,7 @@ const WorkCard = ({
 const HomePage = () => {
   return (
     <main>
-      <section className="text mt-16 py-20 px-2 text-left">
+      <section className="text mt-16 pt-20 px-2 text-left">
         <h1 className="text-4xl text-black/80 leading-[44px]">
           Hey, I'm <span className="text-black/100">Hemsundar Paranthaman</span>, a{' '}
           <span className="text-black/100">full-stack</span> developer based in India.
@@ -47,7 +47,10 @@ const HomePage = () => {
         </p>
       </section>
       <section className="px-2">
-        <h2 className="text-4xl text-left       mb-10 mt-10">Selected Works</h2>
+        <p className="text-2xl  mt-6">Here is some of my works.</p>
+        {/* <h2 className="text-4xl text-left       mb-10 mt-10">Selected Works</h2> */}
+        <WorkCard title="The AWM" subTitle="Developer" imageUrl="/the-awm.png" link="" />
+        <WorkCard title="All DigiApp" subTitle="Developer" imageUrl="/all-digiappu.png" link="" />
         <WorkCard title="My Portfolio" subTitle="Designer + Developer" imageUrl="/my-portfolio.png" link="" />
       </section>
     </main>
