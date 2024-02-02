@@ -82,7 +82,7 @@ const HomePage = () => {
             y: 0,
             opacity: 1,
             transition: {
-              duration: 0.35,
+              duration: 0.75,
             },
           }}
         >
@@ -101,21 +101,32 @@ const HomePage = () => {
           </div>
         </div> */}
         <div className="flex justify-center mt-12">
-          <div className="relative w-full aspect-[2034/2928] max-w-[750px]">
+          <div className="relative w-full aspect-[2034/2928] max-w-[750px] overflow-hidden">
             <motion.div
               className="w-full h-full bg-white absolute z-[100]"
               initial={{ height: '100%' }}
               animate={{
                 height: 0,
-                transition: { duration: 1, delay: 0.35 },
+                transition: { duration: 0.5, delay: 0.35 },
               }}
             ></motion.div>
-            <Image
-              src={'/me_2.png'}
-              alt="My photo"
-              fill
-              style={{ objectFit: 'cover' }}
-            />
+            <motion.div
+              className="relative w-full h-full"
+              initial={{ transform: 'scale(1.5)' }}
+              animate={{
+                transform: 'scale(1)',
+                transition: {
+                  duration: 0.75,
+                },
+              }}
+            >
+              <Image
+                src={'/me_2.png'}
+                alt="My photo"
+                fill
+                style={{ objectFit: 'cover' }}
+              />
+            </motion.div>
           </div>
         </div>
         <p className="text-2xl  mt-10">
@@ -138,12 +149,6 @@ const HomePage = () => {
           title="All DigiApp"
           subTitle="Developer"
           imageUrl="/all-digiapp.png"
-          link=""
-        />
-        <WorkCard
-          title="My Portfolio"
-          subTitle="Designer + Developer"
-          imageUrl="/my-portfolio.png"
           link=""
         />
       </section>

@@ -7,9 +7,10 @@ const Header = () => {
   return (
     <motion.header
       className="bg-transparent z-50 fixed h-16 w-full top-0"
-      initial={{ opacity: 0 }}
+      initial={{ opacity: 0, y: -100 }}
       animate={{
         opacity: 1,
+        y: 0,
         transition: {
           duration: 1,
         },
