@@ -16,14 +16,14 @@ const WorkCard = ({
   link: string;
 }) => {
   return (
-    <div className="mt-10">
-      <div className="relative w-full h-full aspect-square">
+    <div className="mt-8">
+      <div className="relative w-full h-full aspect-square overflow-hidden">
         <Image src={imageUrl} alt={title} fill style={{ objectFit: 'cover' }} />
       </div>
       <div className="mt-1">
         <div className="flex flex-col">
-          <h4 className="text-2xl">{title}</h4>
-          <h5>{subTitle}</h5>
+          <h4 className="text-xl">{title}</h4>
+          <h5 className="text-sm">{subTitle}</h5>
         </div>
       </div>
     </div>
@@ -56,7 +56,7 @@ const HomePage = () => {
     <main>
       {!loading && (
         <>
-          <section className="mt-20 pt-10 px-4 text-left">
+          <section className="mt-24 pt-10 px-4 text-left">
             <motion.div className="text-4xl leading-[46px] vsm:text-5xl">
               {[
                 "Hey, I'm Hemsundar",
@@ -117,22 +117,21 @@ const HomePage = () => {
               </div>
             </div>
           </section>
-          <section className="px-2">
-            {/* <p className="text-2xl  mt-6">Here is some of my works.</p> */}
-            <div className="h-0.5 w-full bg-black mt-10 opacity-10"></div>
-            {/* <h2 className="text-4xl text-left mb-10">Selected Works</h2> */}
-            {/* <WorkCard
-          title="The AWM"
-          subTitle="Development"
-          imageUrl="/the-awm.png"
-          link=""
-        />
-        <WorkCard
-          title="All DigiApp"
-          subTitle="Development"
-          imageUrl="/all-digiapp.png"
-          link=""
-        /> */}
+          <section className="px-4 bg-blacks mt-14">
+            <div className="h-0.5 w-full bg-black opacity-10"></div>
+            <p className="text-2xl mt-6">Latest work...</p>
+            <WorkCard
+              title="The AWM"
+              subTitle="Development"
+              imageUrl="/the-awm.png"
+              link=""
+            />
+            <WorkCard
+              title="All DigiApp"
+              subTitle="Development"
+              imageUrl="/all-digiapp.png"
+              link=""
+            />
           </section>
         </>
       )}
