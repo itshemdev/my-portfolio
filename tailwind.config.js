@@ -12,8 +12,8 @@ module.exports = {
   },
   theme: {
     fontFamily: {
-      serif: ['var(--font-cardo)'],
-      sans: ['var(--font-inter)'],
+      serif: ['adobe-garamond-pro', 'serif'],
+      sans: ['var(--font-roboto)'],
     },
   },
 };
