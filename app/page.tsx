@@ -14,6 +14,7 @@ import {
 } from 'next/font/google';
 import Footer from './_components/footer';
 import Line from './_components/line';
+import { stagger } from 'framer-motion';
 
 const cardo = Cardo({
   weight: ['400', '700'],
@@ -87,17 +88,16 @@ const HomePage = () => {
   }, [loading, setLoading]);
 
   return (
-    <main className="relative">
+    <main className="relative overflow-x-hidden">
       <AnimatePresence>
         {loading && (
           <motion.div
-            className={`${cardo.className} absolute h-screen w-screen z-[1000] top-0 bg-black before:content-['Welcome!'] 
-            before:text-white before:absolute before:text-4xl before:top-[45%] before:left-1/2 before:-translate-x-1/2
-            before:-translate-y-1/2`}
+            className={`${cardo.className} absolute h-screen w-screen z-[1000] top-0 bg-black before:content-['Loading...!'] 
+            before:text-white before:absolute before:text-2xl before:bottom-20 before:right-10`}
             initial={{ top: 0 }}
             exit={{
               top: '-100%',
-              transition: { duration: 1.25, ease: 'easeIn' },
+              transition: { duration: 1, ease: 'easeIn' },
             }}
           />
         )}
@@ -119,9 +119,8 @@ const HomePage = () => {
                 animate={{
                   y: 0,
                   transition: {
+                    delay: 1.5 + index * 0.1,
                     ease: 'easeInOut',
-                    delay: 1.4 + index * 0.1,
-                    // ease: [0.6, 0.01, -0.05, 0.9],
                   },
                 }}
               >
@@ -130,12 +129,18 @@ const HomePage = () => {
             </div>
           ))}
 
-          <p
-            className={`text-xl mt-8 opacity-80 font-serif ${inter.className} font-normal`}
-          >
-            I craft visual solutions for brands, studios, and agencies
-            worldwide.
-          </p>
+          <div className="overflow-hidden">
+            <motion.p
+              className={`text-xl mt-8 opacity-80 font-serif ${inter.className} font-normal`}
+              initial={{ y: 50 }}
+              animate={{
+                y: 0,
+                transition: { delay: 1.7, duration: 0.7, ease: 'easeIn' },
+              }}
+            >
+              I engineer digital solutions for businesses, startups worldwide.
+            </motion.p>
+          </div>
         </motion.div>
 
         <div className="flex justify-center mt-12">
@@ -145,7 +150,7 @@ const HomePage = () => {
               initial={{ height: '100%' }}
               animate={{
                 height: 0,
-                transition: { duration: 0.5, delay: 1.7 },
+                transition: { duration: 0.7, delay: 2 },
               }}
             ></motion.div>
             <motion.div

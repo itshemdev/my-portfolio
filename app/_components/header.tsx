@@ -9,12 +9,13 @@ const Header = () => {
       {/* <div className="w-full h-16"></div> */}
       <motion.header
         className="bg-transparent z-50 fixed h-16 w-full top-0"
-        initial={{ opacity: 0 }}
+        initial={{ opacity: 1, y: 0 }}
         animate={{
-          opacity: 1,
           y: 0,
           transition: {
-            duration: 1,
+            ease: 'easeOut',
+            delay: 1.7,
+            duration: 0.6,
           },
         }}
       >
