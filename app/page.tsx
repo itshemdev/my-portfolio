@@ -1,54 +1,17 @@
 'use client';
-import { ReactNode, Suspense, useEffect, useState } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
 import { AnimatePresence, motion } from 'framer-motion';
+import { Inter, Lora, Roboto } from 'next/font/google';
+import localFont from 'next/font/local';
+import Image from 'next/image';
+import { useEffect, useState } from 'react';
 import myPic from './../public/me_2.png';
-import {
-  Cardo,
-  Inter,
-  Lora,
-  Open_Sans,
-  Montserrat,
-  Roboto,
-  Cormorant_Garamond,
-  Cinzel,
-  Cormorant,
-  Playfair_Display,
-  Rosario,
-  Old_Standard_TT,
-  Prata,
-  Merriweather,
-  Libre_Baskerville,
-  Crimson_Pro,
-  Crimson_Text,
-  EB_Garamond,
-  Geologica,
-  La_Belle_Aurore,
-  Hedvig_Letters_Sans,
-  DM_Serif_Display,
-  Noto_Serif_Ahom,
-  Baskervville,
-  Judson,
-  Source_Serif_4,
-  Source_Code_Pro,
-  Arvo,
-} from 'next/font/google';
 import Footer from './_components/footer';
 import Line from './_components/line';
-import { stagger } from 'framer-motion';
-import localFont from 'next/font/local';
 
 const roboto = Roboto({
   weight: ['400'],
   subsets: ['latin'],
   variable: '--font-roboto',
-});
-
-const inter = Inter({
-  weight: ['400'],
-  subsets: ['latin'],
-  variable: '--font-inter',
 });
 
 const lora = Lora({
@@ -74,6 +37,8 @@ const poppins = localFont({
   variable: '--font-poppins',
 });
 
+//${index % 2 !== 0 && 'pt-20'}
+
 const WorkCard = ({
   title,
   subTitle,
@@ -86,7 +51,7 @@ const WorkCard = ({
   link: string;
 }) => {
   return (
-    <div className="">
+    <div className={`basis-1/2`}>
       <div className="relative w-full h-full aspect-square overflow-hidden">
         <Image src={imageUrl} alt={title} fill style={{ objectFit: 'cover' }} />
       </div>
@@ -142,7 +107,7 @@ const HomePage = () => {
                   <motion.h1
                     className={`text-3xl leading-[40px] min-[360px]:text-[8vw] min-[390px]:text-[8.9vw]
                     min-[390px]:leading-[46px] min-[440px]:leading-[50px]
-                    md:text-4xl md:leading-[46px] lg:text-[400%] lg:leading-[68px]
+                    md:text-4xl md:leading-[46px] lg:text-[350%] lg:leading-[68px]
                     ${serif.className}
                     `}
                     initial={{ y: 60 }}
@@ -161,7 +126,7 @@ const HomePage = () => {
 
               <div className="overflow-hidden">
                 <motion.p
-                  className={`text-xl mt-8 opacity-80 font-serif ${roboto.className} font-normal md:text-2xl`}
+                  className={`text-xl mt-8 opacity-80 font-serif ${roboto.className} font-normal lg:text-2xl`}
                   initial={{ y: 50 }}
                   animate={{
                     y: 0,
@@ -207,7 +172,7 @@ const HomePage = () => {
           </div>
 
           <div
-            className={`${roboto.className} text-lg mt-10 opacity-90 md:text-2xl md:mt-20 lg:text-3xl lg:max-w-[80%] m-auto`}
+            className={`${roboto.className} text-lg mt-10 opacity-90 md:text-2xl  md:mt-20 lg:text-3xl lg:leading-[44px] lg:max-w-[80%] m-auto`}
           >
             <p className={``}>
               I'm a budding computer application student with two years of
@@ -216,82 +181,123 @@ const HomePage = () => {
               learning and innovating to make a mark in this dynamic field.
             </p>
 
-            <Link href={'/about'} className={`mt-6 block ${roboto.className}`}>
+            {/* <Link href={'/about'} className={`mt-6 block ${roboto.className}`}>
               Wanna know more about me? <b>Click here.</b>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </section>
 
-      <section className="px-4">
-        <Line className="mt-12" />
-        <h2 className={`text-3xl mt-12 ${poppins.variable}`}>Testimonials</h2>
+      <section className="px-4 min-[480px]:p-6 md:px-10">
+        <div className="max-w-screen-xl m-auto">
+          <Line className="mt-12" />
+          <h2 className={`text-3xl lg:text-4xl mt-12 ${poppins.variable}`}>
+            Testimonials
+          </h2>
 
-        <div className="mt-8 w-[100%] flex flex-col gap-12">
-          {[
-            {
-              description: `Hem's diverse skills in development and testing greatly benefit JadeCore. A crucial asset to our team.`,
-              name: 'Abel',
-              at: 'JadeCore',
-              role: 'CEO',
-            },
-            {
-              description: `Very fast and efficient. Great seller!`,
-              name: 'Shahshauhin',
-              at: 'Inner Balance Institute  ',
-              role: 'CEO',
-            },
-            {
-              description: `Hem went above and beyond what was required of the gig, very professional and much appreciated.`,
-              name: 'Ryan',
-              at: 'HypeDisco  ',
-              role: 'CEO',
-            },
-          ].map((testimonial) => (
-            <div
-              className={`${roboto.className} relative`}
-              key={testimonial.at}
-            >
-              <p className="text-xl">"{testimonial.description}"</p>
-              <p className="ml-0 text-sm mt-2 font-medium">
-                - {`${testimonial.name} at ${testimonial.at}`}
-              </p>
-            </div>
-          ))}
+          <div className="mt-8 w-[100%] flex flex-col gap-12 lg:flex-row">
+            {[
+              {
+                description: `Hem's diverse skills in development and testing greatly benefit JadeCore. A crucial asset to our team.`,
+                name: 'Abel',
+                at: 'JadeCore',
+                role: 'CEO',
+              },
+              {
+                description: `Very fast and efficient. Great seller!`,
+                name: 'Shahshauhin',
+                at: 'Inner Balance Institute  ',
+                role: 'CEO',
+              },
+              {
+                description: `Hem went above and beyond what was required of the gig, very professional and much appreciated.`,
+                name: 'Ryan',
+                at: 'HypeDisco  ',
+                role: 'CEO',
+              },
+            ].map((testimonial) => (
+              <div
+                className={`${roboto.className} relative w-full lg:w-full`}
+                key={testimonial.at}
+              >
+                <p className="text-xl">"{testimonial.description}"</p>
+                <p className="ml-0 text-sm mt-2 font-medium">
+                  - {`${testimonial.name} at ${testimonial.at}`}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
-      <section className="px-4 bg-blacks">
-        <Line className="mt-12" />
-        <h6 className={`text-3xl ${lora.className} font-serif  mt-12 `}>
-          Latest Work & Ventures
-        </h6>
-        <p className={`${roboto.className} mt-2`}>
-          Here are some of my recent projects.
-        </p>
+      <section className="px-4 min-[480px]:p-6 md:px-10">
+        <div className="max-w-screen-xl m-auto">
+          <Line className="mt-12" />
+          <h6
+            className={`text-3xl lg:text-4xl ${lora.className} font-serif  mt-12 `}
+          >
+            Latest Work & Ventures
+          </h6>
+          <p className={`${roboto.className} mt-2`}>
+            Here are some of my recent projects.
+          </p>
 
-        <div className="flex flex-col gap-8 mt-10">
-          {[
-            {
-              title: 'The AWM',
-              subTitle: 'Development',
-              imageUrl: '/the-awm.png',
-              link: 'the-awm.com',
-            },
-            {
-              title: 'All DigiApp',
-              subTitle: 'Development',
-              imageUrl: '/all-digiapp.png',
-              link: 'all-digiapp.com',
-            },
-          ].map((project) => (
-            <WorkCard
-              key={project.title}
-              title={project.title}
-              subTitle={project.subTitle}
-              imageUrl={project.imageUrl}
-              link={project.link}
-            />
-          ))}
+          <div className="flex gap-4">
+            <div className="mt-10 basis-1/2">
+              {[
+                {
+                  title: 'The AWM',
+                  subTitle: 'Development',
+                  imageUrl: '/the-awm.png',
+                  link: 'the-awm.com',
+                },
+                {
+                  title: 'All DigiApp',
+                  subTitle: 'Development',
+                  imageUrl: '/all-digiapp.png',
+                  link: 'all-digiapp.com',
+                },
+              ].map((project, index) => {
+                if (index % 2 === 0)
+                  return (
+                    <WorkCard
+                      key={project.title}
+                      title={project.title}
+                      subTitle={project.subTitle}
+                      imageUrl={project.imageUrl}
+                      link={project.link}
+                    />
+                  );
+              })}
+            </div>
+            <div className="gap-8 mt-10 basis-1/2 md:mt-20 md:mt-40">
+              {[
+                {
+                  title: 'The AWM',
+                  subTitle: 'Development',
+                  imageUrl: '/the-awm.png',
+                  link: 'the-awm.com',
+                },
+                {
+                  title: 'All DigiApp',
+                  subTitle: 'Development',
+                  imageUrl: '/all-digiapp.png',
+                  link: 'all-digiapp.com',
+                },
+              ].map((project, index) => {
+                if (index % 2 !== 0) {
+                  return (
+                    <WorkCard
+                      key={project.title}
+                      title={project.title}
+                      subTitle={project.subTitle}
+                      imageUrl={project.imageUrl}
+                      link={project.link}
+                    />
+                  );
+                }
+              })}
+            </div>
+          </div>
         </div>
       </section>
       <section className="px-4">
