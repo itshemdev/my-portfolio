@@ -1,9 +1,17 @@
 'use client';
 import { ReactNode, Suspense, useEffect, useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { AnimatePresence, motion } from 'framer-motion';
 import myPic from './../public/me_2.png';
-import { Cardo, Inter, Lora } from 'next/font/google';
+import {
+  Cardo,
+  Inter,
+  Lora,
+  Open_Sans,
+  Montserrat,
+  Roboto,
+} from 'next/font/google';
 import Footer from './_components/footer';
 import Line from './_components/line';
 
@@ -17,6 +25,24 @@ const inter = Inter({
   weight: ['400'],
   subsets: ['latin'],
   variable: '--font-inter',
+});
+
+const openSans = Open_Sans({
+  weight: ['400'],
+  subsets: ['latin'],
+  variable: '--font-open-sans',
+});
+
+const montserrat = Montserrat({
+  weight: ['400'],
+  subsets: ['latin'],
+  variable: '--font-montserrat',
+});
+
+const roboto = Roboto({
+  weight: ['400'],
+  subsets: ['latin'],
+  variable: '--font-roboto',
 });
 
 const lora = Lora({
@@ -73,11 +99,27 @@ const HomePage = () => {
   //   );
   // }
 
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup function to remove the event listener
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <main>
       {!loading && (
         <>
           <section className="mt-24 pt-10 px-4 text-left w-full">
+            {screenWidth}
             <motion.div
               className={`text-[8.9vw] ${lora.className} font-normal leading-[46px] vsm:text-5xl`}
             >
@@ -104,7 +146,7 @@ const HomePage = () => {
               ))}
 
               <p
-                className={`text-xl mt-6 opacity-80 font-serif ${inter.className} font-normalu`}
+                className={`text-xl mt-6 opacity-80 font-serif ${inter.className} font-normal`}
               >
                 I craft visual solutions for brands, studios, and agencies
                 worldwide.
@@ -141,10 +183,57 @@ const HomePage = () => {
                 </motion.div>
               </div>
             </div>
+
+            <p className={`${roboto.className} text-lg mt-10 opacity-90`}>
+              I'm a budding computer application student with two years of
+              freelance web development experience. My heart beats for
+              technology, as I strive to stay ahead of the curve, constantly
+              learning and innovating to make a mark in this dynamic field.
+            </p>
+
+            <Link href={'/about'} className={`mt-6 block ${roboto.className}`}>
+              Wanna know more about me? <b>Click here.</b>
+            </Link>
           </section>
+          <section className="px-4">
+            <Line className="mt-12" />
+            <h2 className="text-3xl mt-12">Testimonials</h2>
+
+            <div className="mt-8 w-[100%] flex flex-col gap-12">
+              {[
+                {
+                  description: `Hem's diverse skills in development and testing greatly benefit JadeCore. A crucial asset to our team.`,
+                  name: 'Abel',
+                  at: 'JadeCore',
+                  role: 'CEO',
+                },
+                {
+                  description: `Very fast and efficient. Great seller!`,
+                  name: 'Shahshauhin',
+                  at: 'Inner Balance Institute  ',
+                  role: 'CEO',
+                },
+                {
+                  description: `Hem went above and beyond what was required of the gig, very professional and much appreciated.`,
+                  name: 'Ryan',
+                  at: 'HypeDisco  ',
+                  role: 'CEO',
+                },
+              ].map((testimonial) => (
+                <div className={`${inter.className} relative`}>
+                  <p className="text-xl">"{testimonial.description}"</p>
+                  <p className="ml-0 text-sm mt-2 font-medium">
+                    - {`${testimonial.name} at ${testimonial.at}`}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </section>
+
           <section className="px-4 bg-blacks">
+            <Line className="mt-12" />
             <h6
-              className={`text-3xl ${lora.className} font-serif  mt-16 my-10 `}
+              className={`text-3xl ${lora.className} font-serif  mt-12 my-10 `}
             >
               Latest Work & Ventures
             </h6>
@@ -173,45 +262,7 @@ const HomePage = () => {
               ))}
             </div>
           </section>
-          <section className="px-4">
-            {/* <Line className="mt-8" /> */}
-            <h2 className="text-3xl mt-16">Testimonials</h2>
 
-            <div className="mt-8 w-[100%] flex flex-col gap-12">
-              {[
-                {
-                  description: `Hem's diverse skills in development and testing greatly benefit JadeCore. A crucial asset to our team.`,
-                  name: 'Abel',
-                  at: 'JadeCore',
-                  role: 'CEO',
-                },
-                {
-                  description: `Very fast and efficient. Great seller!`,
-                  name: 'Shahshauhin',
-                  at: 'Inner Balance Institute  ',
-                  role: 'CEO',
-                },
-                {
-                  description: `Hem went above and beyond what was required of the gig, very professional and much appreciated.`,
-                  name: 'Ryan',
-                  at: 'HypeDisco  ',
-                  role: 'CEO',
-                },
-              ].map((testimonial) => (
-                <div className={`${inter.className} relative`}>
-                  <p className="text-xl">"{testimonial.description}"</p>
-                  <p className="ml-0 text-sm mt-2 font-medium">
-                    - {`${testimonial.name} at ${testimonial.at}`}
-                  </p>
-
-                  {/* <div className="relative mt-3">
-                    <p className="ml-3">"{testimonial.description}"</p>
-                    <div className="h-full w-1 bg-black absolute opacity-20 top-0"></div>
-                  </div> */}
-                </div>
-              ))}
-            </div>
-          </section>
           {/* <Footer /> */}
         </>
       )}

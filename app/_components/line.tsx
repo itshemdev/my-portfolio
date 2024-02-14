@@ -1,5 +1,7 @@
 const Line = ({ className }: { className?: string }) => {
-  return <div className={`w-full bg-black opacity-20 h-1 ${className}`}></div>;
+  return (
+    <div className={`w-full bg-black opacity-10 h-0.5 ${className}`}></div>
+  );
 };
 
 export default Line;
