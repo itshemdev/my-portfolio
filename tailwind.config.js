@@ -15,10 +15,5 @@ module.exports = {
       serif: ['var(--font-cardo)'],
       sans: ['var(--font-inter)'],
     },
-    extend: {
-      screens: {
-        vsm: '420',
-      },
-    },
   },
 };
