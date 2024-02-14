@@ -4,7 +4,7 @@ import { Inter, Lora, Roboto } from 'next/font/google';
 import localFont from 'next/font/local';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import myPic from './../public/me_2.png';
+import myPic from './../public/hemsundar-paranthaman-1.png';
 import Footer from './_components/footer';
 import Line from './_components/line';
 import Link from 'next/link';
@@ -91,7 +91,7 @@ const HomePage = () => {
         )}
       </AnimatePresence>
 
-      <section className="pt-36 px-4 text-left w-full min-[480px]:px-6 md:pt-32 md:px-10">
+      <section className="pt-36 px-4 text-left w-full min-[480px]:px-6 md:pt-24 md:px-10">
         <div className="max-w-screen-xl m-auto">
           <div className="flex flex-col gap-12 md:flex-row md:items-center md:justify-between md:gap-10 ">
             <motion.div
@@ -141,7 +141,7 @@ const HomePage = () => {
             </motion.div>
 
             <div className="flex justify-center w-full md:basis-5/12">
-              <div className="relative w-full aspect-[2034/2928] max-w-[750px] max-h-[700px] overflow-hidden">
+              <div className="relative w-full aspect-[2034/2928] max-w-[750px] max-h-[700] overflow-hidden">
                 <motion.div
                   className="w-full h-full bg-white absolute z-[100]"
                   initial={{ height: '100%' }}
@@ -248,7 +248,7 @@ const HomePage = () => {
             Here are some of my recent projects.
           </p>
 
-          <div className="flex flex-col md:flex-row mt-12u  gap-10">
+          <div className="flex flex-col md:flex-row mt-12  gap-10">
             <div className="basis-1/2">
               {[
                 {
@@ -307,25 +307,55 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-      <section className="px-4">
-        <Line className="mb-10 mt-16" />
-        <h2 className={`${lora.className} text-3xl`}>
-          Have a project in mind?
-        </h2>
-        <p className={`${roboto.className} mt-2`}>
-          I would love to collaborate for something.
-        </p>
-        <textarea
-          name=""
-          id=""
-          className="border-2 w-full mt-6 rounded-lg p-2"
-          placeholder="Write something here."
-        ></textarea>
-        <button
-          className={`block mt-2 bg-black text-white px-4 py-2 rounded-lg`}
-        >
-          Send message
-        </button>
+      <section className="px-4 min-[480px]:px-6 md:px-10">
+        <div className="max-w-screen-xl m-auto">
+          {/* <Line className="mb-10 mt-16" />
+          <h2 className={`${lora.className} text-3xl md:text-4xl`}>
+            Have a project in mind?
+          </h2>
+          <p className={`${roboto.className} mt-2`}>
+            I would love to collaborate for something.
+          </p>
+
+          <div className="flex flex-col md:flex-row mt-12">
+            <div className="hidden md:flex  relative w-40 aspect-square rounded-full overflow-hidden">
+              <Image
+                src={'/hemsundar-paranthaman-2.jpeg'}
+                alt="Photo of Hemsundar Paranthaman."
+                fill
+              />
+            </div>
+            <div>
+              <textarea
+                name=""
+                id=""
+                className="border-2 w-full mt-6 rounded-lg p-2"
+                placeholder="Write something here."
+              ></textarea>
+              <button
+                className={`block mt-2 bg-black text-white px-4 py-2 rounded-lg`}
+              >
+                Send message
+              </button>
+            </div>
+          </div> */}
+          <Line className="mb-10 mt-16" />
+          <div className="flex">
+            <div className="relative hidden basis-1/2 aspect-square md:flex overflow-hidden rounded-full">
+              <Image
+                src={'/hemsundar-paranthaman-2.jpeg'}
+                alt="Photo of Hemsundar Paranthaman."
+                fill
+              />
+            </div>
+            <div className=" p-10">
+              <h1 className="text-5xl">Get In Touch.</h1>
+              <p className={`${roboto.className} mt-2`}>
+                I would love to collaborate for something.
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
       <Footer />
     </main>
