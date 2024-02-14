@@ -3,6 +3,25 @@ import { ReactNode, Suspense, useEffect, useState } from 'react';
 import Image from 'next/image';
 import { AnimatePresence, motion } from 'framer-motion';
 import myPic from './../public/me_2.png';
+import { Cardo, Inter, Lora } from 'next/font/google';
+import Footer from './_components/footer';
+
+const cardo = Cardo({
+  weight: ['400', '700'],
+  subsets: ['latin'],
+  variable: '--font-cardo',
+});
+
+const inter = Inter({
+  weight: ['400'],
+  subsets: ['latin'],
+  variable: '--font-inter',
+});
+
+const lora = Lora({
+  subsets: ['latin'],
+  variable: '--font-lora',
+});
 
 const WorkCard = ({
   title,
@@ -16,14 +35,14 @@ const WorkCard = ({
   link: string;
 }) => {
   return (
-    <div className="mt-8">
+    <div className="">
       <div className="relative w-full h-full aspect-square overflow-hidden">
         <Image src={imageUrl} alt={title} fill style={{ objectFit: 'cover' }} />
       </div>
       <div className="mt-1">
         <div className="flex flex-col">
-          <h4 className="text-xl">{title}</h4>
-          <h5 className="text-sm">{subTitle}</h5>
+          <h4 className={`text-xl ${inter.className}`}>{title}</h4>
+          <h5 className={`text-xs ${inter.className}`}>{subTitle}</h5>
         </div>
       </div>
     </div>
@@ -57,7 +76,9 @@ const HomePage = () => {
       {!loading && (
         <>
           <section className="mt-24 pt-10 px-4 text-left">
-            <motion.div className="text-4xl leading-[46px] vsm:text-5xl">
+            <motion.div
+              className={`text-4xl ${lora.className} font-normal leading-[46px] vsm:text-5xl`}
+            >
               {[
                 "Hey, I'm Hemsundar",
                 'a full-stack developer',
@@ -65,7 +86,7 @@ const HomePage = () => {
               ].map((string, index) => (
                 <div key={string} className="overflow-hidden">
                   <motion.h1
-                    className=""
+                    className={``}
                     initial={{ y: 60 }}
                     animate={{
                       y: 0,
@@ -80,7 +101,9 @@ const HomePage = () => {
                 </div>
               ))}
 
-              <p className="text-xl mt-6 opacity-80">
+              <p
+                className={`text-xl mt-6 opacity-80 font-serif ${inter.className} font-normalu`}
+              >
                 I craft visual solutions for brands, studios, and agencies
                 worldwide.
               </p>
@@ -117,22 +140,33 @@ const HomePage = () => {
               </div>
             </div>
           </section>
-          <section className="px-4 bg-blacks mt-14">
-            <div className="h-0.5 w-full bg-black opacity-10"></div>
-            <p className="text-2xl mt-6">Latest work...</p>
-            <WorkCard
-              title="The AWM"
-              subTitle="Development"
-              imageUrl="/the-awm.png"
-              link=""
-            />
-            <WorkCard
-              title="All DigiApp"
-              subTitle="Development"
-              imageUrl="/all-digiapp.png"
-              link=""
-            />
+          <section className="px-4 bg-blacks">
+            {/* <div className="h-0.5 w-full bg-black opacity-10 mb-14"></div> */}
+            <h6
+              className={`text-3xl ${lora.className} font-serif  mt-16 my-8 `}
+            >
+              Latest Work & Ventures
+            </h6>
+            {/* <p className="text-lg">
+              Here are some of the projects I have recently worked.
+            </p> */}
+            {[
+              {
+                title: 'The AWM',
+                subTitle: 'Development',
+                imageUrl: '/the-awm.png',
+                link: 'the-awm.com',
+              },
+            ].map((project) => (
+              <WorkCard
+                title={project.title}
+                subTitle={project.subTitle}
+                imageUrl={project.imageUrl}
+                link={project.link}
+              />
+            ))}
           </section>
+          <Footer />
         </>
       )}
     </main>

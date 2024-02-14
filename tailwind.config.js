@@ -11,6 +11,10 @@ module.exports = {
     hoverOnlyWhenSupported: true,
   },
   theme: {
+    fontFamily: {
+      serif: ['var(--font-cardo)'],
+      sans: ['var(--font-inter)'],
+    },
     extend: {
       screens: {
         vsm: '500px',
