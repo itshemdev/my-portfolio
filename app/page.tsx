@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 import myPic from './../public/me_2.png';
 import Footer from './_components/footer';
 import Line from './_components/line';
+import Link from 'next/link';
 
 const roboto = Roboto({
   weight: ['400'],
@@ -181,6 +182,12 @@ const HomePage = () => {
               learning and innovating to make a mark in this dynamic field.
             </p>
 
+            <Link
+              href={'/pdfs/hemsundar_paranthaman_resume.pdf'}
+              className={`mt-6 block ${roboto.className}`}
+            >
+              Wanna look at my Resume? <b>Click here.</b>
+            </Link>
             {/* <Link href={'/about'} className={`mt-6 block ${roboto.className}`}>
               Wanna know more about me? <b>Click here.</b>
             </Link> */}
@@ -241,8 +248,8 @@ const HomePage = () => {
             Here are some of my recent projects.
           </p>
 
-          <div className="flex gap-4">
-            <div className="mt-10 basis-1/2">
+          <div className="flex flex-col md:flex-row mt-12u  gap-10">
+            <div className="basis-1/2">
               {[
                 {
                   title: 'The AWM',
@@ -269,7 +276,7 @@ const HomePage = () => {
                   );
               })}
             </div>
-            <div className="gap-8 mt-10 basis-1/2 md:mt-20 md:mt-40">
+            <div className="gap-8 basis-1/2 md:mt-20 md:mt-40">
               {[
                 {
                   title: 'The AWM',
