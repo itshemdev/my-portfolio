@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import myPic from './../public/me_2.png';
 import { Cardo, Inter, Lora } from 'next/font/google';
 import Footer from './_components/footer';
+import Line from './_components/line';
 
 const cardo = Cardo({
   weight: ['400', '700'],
@@ -169,6 +170,45 @@ const HomePage = () => {
                   imageUrl={project.imageUrl}
                   link={project.link}
                 />
+              ))}
+            </div>
+          </section>
+          <section className="px-4">
+            {/* <Line className="mt-8" /> */}
+            <h2 className="text-3xl mt-16">Testimonials</h2>
+
+            <div className="mt-8 w-[100%] flex flex-col gap-12">
+              {[
+                {
+                  description: `Hem's diverse skills in development and testing greatly benefit JadeCore. A crucial asset to our team.`,
+                  name: 'Abel',
+                  at: 'JadeCore',
+                  role: 'CEO',
+                },
+                {
+                  description: `Very fast and efficient. Great seller!`,
+                  name: 'Shahshauhin',
+                  at: 'Inner Balance Institute  ',
+                  role: 'CEO',
+                },
+                {
+                  description: `Hem went above and beyond what was required of the gig, very professional and much appreciated.`,
+                  name: 'Ryan',
+                  at: 'HypeDisco  ',
+                  role: 'CEO',
+                },
+              ].map((testimonial) => (
+                <div className={`${inter.className} relative`}>
+                  <p className="text-xl">"{testimonial.description}"</p>
+                  <p className="ml-0 text-sm mt-2 font-medium">
+                    - {`${testimonial.name} at ${testimonial.at}`}
+                  </p>
+
+                  {/* <div className="relative mt-3">
+                    <p className="ml-3">"{testimonial.description}"</p>
+                    <div className="h-full w-1 bg-black absolute opacity-20 top-0"></div>
+                  </div> */}
+                </div>
               ))}
             </div>
           </section>
