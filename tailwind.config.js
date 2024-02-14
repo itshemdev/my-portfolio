@@ -17,7 +17,7 @@ module.exports = {
     },
     extend: {
       screens: {
-        vsm: '500px',
+        vsm: '420',
       },
     },
   },

@@ -19,6 +19,7 @@ const inter = Inter({
 });
 
 const lora = Lora({
+  weight: ['400', '500', '600'],
   subsets: ['latin'],
   variable: '--font-lora',
 });
@@ -75,9 +76,9 @@ const HomePage = () => {
     <main>
       {!loading && (
         <>
-          <section className="mt-24 pt-10 px-4 text-left">
+          <section className="mt-24 pt-10 px-4 text-left w-full">
             <motion.div
-              className={`text-4xl ${lora.className} font-normal leading-[46px] vsm:text-5xl`}
+              className={`text-[8.9vw] ${lora.className} font-normal leading-[46px] vsm:text-5xl`}
             >
               {[
                 "Hey, I'm Hemsundar",
@@ -141,32 +142,37 @@ const HomePage = () => {
             </div>
           </section>
           <section className="px-4 bg-blacks">
-            {/* <div className="h-0.5 w-full bg-black opacity-10 mb-14"></div> */}
             <h6
-              className={`text-3xl ${lora.className} font-serif  mt-16 my-8 `}
+              className={`text-3xl ${lora.className} font-serif  mt-16 my-10 `}
             >
               Latest Work & Ventures
             </h6>
-            {/* <p className="text-lg">
-              Here are some of the projects I have recently worked.
-            </p> */}
-            {[
-              {
-                title: 'The AWM',
-                subTitle: 'Development',
-                imageUrl: '/the-awm.png',
-                link: 'the-awm.com',
-              },
-            ].map((project) => (
-              <WorkCard
-                title={project.title}
-                subTitle={project.subTitle}
-                imageUrl={project.imageUrl}
-                link={project.link}
-              />
-            ))}
+
+            <div className="flex flex-col gap-8">
+              {[
+                {
+                  title: 'The AWM',
+                  subTitle: 'Development',
+                  imageUrl: '/the-awm.png',
+                  link: 'the-awm.com',
+                },
+                {
+                  title: 'All DigiApp',
+                  subTitle: 'Development',
+                  imageUrl: '/all-digiapp.png',
+                  link: 'all-digiapp.com',
+                },
+              ].map((project) => (
+                <WorkCard
+                  title={project.title}
+                  subTitle={project.subTitle}
+                  imageUrl={project.imageUrl}
+                  link={project.link}
+                />
+              ))}
+            </div>
           </section>
-          <Footer />
+          {/* <Footer /> */}
         </>
       )}
     </main>

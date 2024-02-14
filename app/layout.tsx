@@ -21,7 +21,7 @@ export default function RootLayout({
       <body>
         {/* <div className="bg-black text-white text-center w-full">Site is under maintenance</div> */}
 
-        {/* <Header /> */}
+        <Header />
         {children}
         {/* <Footer /> */}
       </body>

@@ -22,11 +22,11 @@ const Header = () => {
           Site is under maintenance
         </div>
 
-        <div className="flex items-center justify-between top-0 px-2">
+        <div className="flex items-center justify-between top-0 px-4">
           <a href="" className="text-xl">
             Hem
           </a>
-          <nav className="flex gap-2">
+          <nav className="flex gap-4">
             {['Work', 'About', 'Contact'].map((item) => (
               <a key={item} className="opacity-80">
                 {item}
