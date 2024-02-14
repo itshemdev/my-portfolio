@@ -222,11 +222,14 @@ const HomePage = () => {
       </section>
       <section className="px-4 bg-blacks">
         <Line className="mt-12" />
-        <h6 className={`text-3xl ${lora.className} font-serif  mt-12 my-10 `}>
+        <h6 className={`text-3xl ${lora.className} font-serif  mt-12 `}>
           Latest Work & Ventures
         </h6>
+        <p className={`${roboto.className} mt-2`}>
+          Here are some of my recent projects.
+        </p>
 
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-8 mt-10">
           {[
             {
               title: 'The AWM',
@@ -251,6 +254,27 @@ const HomePage = () => {
           ))}
         </div>
       </section>
+      <section className="px-4">
+        <Line className="mb-10 mt-16" />
+        <h2 className={`${lora.className} text-3xl`}>
+          Have a project in mind?
+        </h2>
+        <p className={`${roboto.className} mt-2`}>
+          I would love to collaborate for something.
+        </p>
+        <textarea
+          name=""
+          id=""
+          className="border-2 w-full mt-6 rounded-lg p-2"
+          placeholder="Write something here."
+        ></textarea>
+        <button
+          className={`block mt-2 bg-black text-white px-4 py-2 rounded-lg`}
+        >
+          Send message
+        </button>
+      </section>
+      <Footer />
     </main>
   );
 };

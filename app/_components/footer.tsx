@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const Footer = () => {
   return (
-    <footer className="bg-black py-14 mt-10 px-4">
+    <footer className="bg-black py-14 mt-16 px-4">
       <h2 className="text-4xl text-white">Have a project in mind?</h2>
       <a href="" className="text-white text-xl mt-2 block">
         hemsundar.paranthaman@outlook.com
