@@ -79,7 +79,7 @@ const HomePage = () => {
         )}
       </AnimatePresence>
 
-      <section className="pt-36 px-4 text-left w-full min-[480px]:px-6 md:pt-24 md:px-10">
+      <section className="pt-36 px-4 text-left w-full min-[480px]:px-6 md:pt-20 md:px-10">
         <div className="max-w-screen-xl m-auto">
           <div className="flex flex-col gap-12 md:flex-row md:items-center md:justify-between md:gap-10 ">
             <motion.div
@@ -190,7 +190,7 @@ const HomePage = () => {
             Testimonials
           </h2>
 
-          <div className="mt-8 w-[100%] flex flex-col gap-12 lg:flex-row">
+          {/* <div className="mt-8 w-[100%] flex flex-col gap-12 md:flex-row">
             {[
               {
                 description: `Hem's diverse skills in development and testing greatly benefit JadeCore. A crucial asset to our team.`,
@@ -212,7 +212,44 @@ const HomePage = () => {
               },
             ].map((testimonial) => (
               <div
-                className={`${roboto.className} relative w-full lg:w-full`}
+                className={`${roboto.className} w-1/2 relative w-full lg:w-full`}
+                key={testimonial.at}
+              >
+                <p className="text-xl">"{testimonial.description}"</p>
+                <p className="ml-0 text-sm mt-2 font-medium">
+                  - {`${testimonial.name} at ${testimonial.at}`}
+                </p>
+              </div>
+            ))}
+          </div> */}
+          <div className="mt-8 w-[100%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 \ gap-10 md:gap-y-16">
+            {[
+              {
+                description: `Hem's diverse skills in development and testing greatly benefit JadeCore. A crucial asset to our team.`,
+                name: 'Abel',
+                at: 'JadeCore',
+                role: 'CEO',
+              },
+              {
+                description: `Hem went above and beyond what was required of the gig, very professional and much appreciated.`,
+                name: 'Ryan',
+                at: 'HypeDisco  ',
+                role: 'CEO',
+              },
+              {
+                description: `Very fast and efficient. Great seller!`,
+                name: 'Shahshauhin',
+                at: 'Inner Balance Institute  ',
+                role: 'CEO',
+              },
+            ].map((testimonial, index) => (
+              <div
+                className={`${
+                  roboto.className
+                } relative w-full h-full lg:w-full flex flex-col justify-between ${
+                  index === 2 &&
+                  'md:col-start-1 md:col-end-3 md:w-1/2 md:m-auto lg:col-start-3 lg:col-end-4'
+                }`}
                 key={testimonial.at}
               >
                 <p className="text-xl">"{testimonial.description}"</p>
@@ -281,7 +318,7 @@ const HomePage = () => {
               />
             </div>
             <div className="basis-full md:basis-5/12 lg:p-10">
-              <h1 className="text-5xl">Get In Touch.</h1>
+              <h1 className="text-4xl lg:text-5xl">Get In Touch.</h1>
               <p className={`${roboto.className} mt-2`}>
                 I would love to collaborate for something.
               </p>
