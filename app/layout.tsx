@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description:
     'Experienced Web Developer adept in all stages of advanced web development. Knowledgeable in user interface, testing, and debugging processes. Bringing forth expertise in design, installation, testing and maintenance of web systems.',
   twitter: {
-    card: 'summary_large_image',
+    card: 'summary',
   },
   openGraph: {
     images: '/hemsundar-paranthaman-2.jpeg',
