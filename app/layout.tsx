@@ -15,7 +15,11 @@ export const metadata: Metadata = {
     card: 'summary',
   },
   openGraph: {
-    images: { url: '/hemsundar-paranthaman-2-compressed.jpeg' },
+    images: {
+      url: '/hemsundar-paranthaman-2-compressed.jpeg',
+      width: '300',
+      height: '300',
+    },
   },
 };
 
