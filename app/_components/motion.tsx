@@ -1,0 +1,31 @@
+'use client';
+
+import { ReactNode } from 'react';
+import { AnimationProps, motion } from 'framer-motion';
+
+const Motion = ({
+  children,
+  initial,
+  className,
+  whileHover,
+  animate,
+}: {
+  children?: ReactNode;
+  className: string;
+  initial?: any;
+  whileHover?: any;
+  animate?: any;
+}) => {
+  return (
+    <motion.div
+      initial={initial}
+      className={className}
+      whileHover={whileHover}
+      animate={animate}
+    >
+      {children}
+    </motion.div>
+  );
+};
+
+export default Motion;

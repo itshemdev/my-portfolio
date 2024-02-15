@@ -9,6 +9,14 @@ export const metadata: Metadata = {
     default: "'Hem | Developer'",
     template: '%s | Hem',
   },
+  description:
+    'Experienced Web Developer adept in all stages of advanced web development. Knowledgeable in user interface, testing, and debugging processes. Bringing forth expertise in design, installation, testing and maintenance of web systems.',
+  twitter: {
+    card: 'summary_large_image',
+  },
+  openGraph: {
+    images: '/hemsundar-paranthaman-2.jpeg',
+  },
 };
 
 export default function RootLayout({
@@ -19,10 +27,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {/* <div className="bg-black text-white text-center w-full">Site is under maintenance</div> */}
         {/* <Header /> */}
         {children}
-        {/* <Footer /> */}
       </body>
     </html>
   );

@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { Roboto } from 'next/font/google';
 import { motion } from 'framer-motion';
+import Motion from './motion';
 
 const roboto = Roboto({
   weight: ['400'],
@@ -27,7 +28,7 @@ const WorkCard = ({
     <a href={link} target="_blank">
       <div className={`basis-1/2`}>
         <div className="overflow-hidden">
-          <motion.div
+          <Motion
             initial={{ transform: 'scale(1)' }}
             whileHover={{ transform: 'scale(1.05)' }}
             className="relative w-full h-full aspect-square overflow-hidden"
@@ -38,7 +39,7 @@ const WorkCard = ({
               fill
               style={{ objectFit: 'cover' }}
             />
-          </motion.div>
+          </Motion>
         </div>
         <div className="mt-1 flex justify-between items-center">
           <div className="flex flex-col">
