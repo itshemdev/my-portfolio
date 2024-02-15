@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     card: 'summary',
   },
   openGraph: {
-    images: '/hemsundar-paranthaman-2.jpeg',
+    images: { url: '/hemsundar-paranthaman-2-compressed.jpeg' },
   },
 };
 
