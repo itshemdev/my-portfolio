@@ -16,9 +16,10 @@ export const metadata: Metadata = {
   },
   openGraph: {
     images: {
-      url: '/hemsundar-paranthaman-2-compressed.jpeg',
+      url: 'https://www.itshem.dev/hemsundar-paranthaman-2-compressed.jpeg',
       width: '300',
       height: '300',
+      type: 'image/jpeg',
     },
   },
 };
