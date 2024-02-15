@@ -8,6 +8,7 @@ import myPic from './../public/hemsundar-paranthaman-1.png';
 import Footer from './_components/footer';
 import Line from './_components/line';
 import Link from 'next/link';
+import WorkCard from './_components/workCard';
 
 const roboto = Roboto({
   weight: ['400'],
@@ -38,34 +39,6 @@ const poppins = localFont({
   variable: '--font-poppins',
 });
 
-//${index % 2 !== 0 && 'pt-20'}
-
-const WorkCard = ({
-  title,
-  subTitle,
-  imageUrl,
-  link,
-}: {
-  title: string;
-  subTitle: string;
-  imageUrl: string;
-  link: string;
-}) => {
-  return (
-    <div className={`basis-1/2`}>
-      <div className="relative w-full h-full aspect-square overflow-hidden">
-        <Image src={imageUrl} alt={title} fill style={{ objectFit: 'cover' }} />
-      </div>
-      <div className="mt-1">
-        <div className="flex flex-col">
-          <h4 className={`text-xl ${roboto.className}`}>{title}</h4>
-          <h5 className={`text-xs ${roboto.className}`}>{subTitle}</h5>
-        </div>
-      </div>
-    </div>
-  );
-};
-
 const HomePage = () => {
   const [loading, setLoading] = useState(true);
 
@@ -74,6 +47,21 @@ const HomePage = () => {
       setLoading(false);
     }, 1000);
   }, [loading, setLoading]);
+
+  const works = [
+    {
+      title: 'The AWM',
+      subTitle: 'Development',
+      imageUrl: '/the-awm.png',
+      link: 'https://www.the-awm.com/',
+    },
+    {
+      title: 'All DigiApp',
+      subTitle: 'Development',
+      imageUrl: '/all-digiapp.png',
+      link: 'https://all-digiapp.com',
+    },
+  ];
 
   return (
     <main className="relative overflow-x-hidden">
@@ -173,7 +161,7 @@ const HomePage = () => {
           </div>
 
           <div
-            className={`${roboto.className} text-lg mt-10 opacity-90 md:text-2xl  md:mt-20 lg:text-3xl lg:leading-[44px] lg:max-w-[80%] m-auto`}
+            className={`${roboto.className} text-lg mt-10 opacity-90 md:text-2xl  md:mt-20 lg:text-2xl lg:leading-[40px] lg:max-w-[80%] m-auto`}
           >
             <p className={``}>
               I'm a budding computer application student with two years of
@@ -250,20 +238,7 @@ const HomePage = () => {
 
           <div className="flex flex-col md:flex-row mt-12  gap-10">
             <div className="basis-1/2">
-              {[
-                {
-                  title: 'The AWM',
-                  subTitle: 'Development',
-                  imageUrl: '/the-awm.png',
-                  link: 'the-awm.com',
-                },
-                {
-                  title: 'All DigiApp',
-                  subTitle: 'Development',
-                  imageUrl: '/all-digiapp.png',
-                  link: 'all-digiapp.com',
-                },
-              ].map((project, index) => {
+              {works.map((project, index) => {
                 if (index % 2 === 0)
                   return (
                     <WorkCard
@@ -277,20 +252,7 @@ const HomePage = () => {
               })}
             </div>
             <div className="gap-8 basis-1/2 md:mt-20 md:mt-40">
-              {[
-                {
-                  title: 'The AWM',
-                  subTitle: 'Development',
-                  imageUrl: '/the-awm.png',
-                  link: 'the-awm.com',
-                },
-                {
-                  title: 'All DigiApp',
-                  subTitle: 'Development',
-                  imageUrl: '/all-digiapp.png',
-                  link: 'all-digiapp.com',
-                },
-              ].map((project, index) => {
+              {works.map((project, index) => {
                 if (index % 2 !== 0) {
                   return (
                     <WorkCard
@@ -309,50 +271,44 @@ const HomePage = () => {
       </section>
       <section className="px-4 min-[480px]:px-6 md:px-10">
         <div className="max-w-screen-xl m-auto">
-          {/* <Line className="mb-10 mt-16" />
-          <h2 className={`${lora.className} text-3xl md:text-4xl`}>
-            Have a project in mind?
-          </h2>
-          <p className={`${roboto.className} mt-2`}>
-            I would love to collaborate for something.
-          </p>
-
-          <div className="flex flex-col md:flex-row mt-12">
-            <div className="hidden md:flex  relative w-40 aspect-square rounded-full overflow-hidden">
+          <Line className="mb-16 mt-16" />
+          <div className="flex items-center gap-20">
+            <div className="relative hidden basis-5/12 aspect-square md:flex overflow-hidden rounded-full">
               <Image
                 src={'/hemsundar-paranthaman-2.jpeg'}
                 alt="Photo of Hemsundar Paranthaman."
                 fill
               />
             </div>
-            <div>
-              <textarea
-                name=""
-                id=""
-                className="border-2 w-full mt-6 rounded-lg p-2"
-                placeholder="Write something here."
-              ></textarea>
-              <button
-                className={`block mt-2 bg-black text-white px-4 py-2 rounded-lg`}
-              >
-                Send message
-              </button>
-            </div>
-          </div> */}
-          <Line className="mb-10 mt-16" />
-          <div className="flex">
-            <div className="relative hidden basis-1/2 aspect-square md:flex overflow-hidden rounded-full">
-              <Image
-                src={'/hemsundar-paranthaman-2.jpeg'}
-                alt="Photo of Hemsundar Paranthaman."
-                fill
-              />
-            </div>
-            <div className=" p-10">
+            <div className="basis-full md:basis-5/12 lg:p-10">
               <h1 className="text-5xl">Get In Touch.</h1>
               <p className={`${roboto.className} mt-2`}>
                 I would love to collaborate for something.
               </p>
+
+              <div className={`mt-10 flex flex-col  gap-4 ${roboto.className}`}>
+                <input
+                  type="text"
+                  placeholder="Name"
+                  className={`border-2 rounded-lg p-2 w-full `}
+                />
+                <input
+                  type="email"
+                  placeholder="Mail"
+                  className={`border-2 rounded-lg p-2 w-full ${roboto.className}`}
+                />
+                <textarea
+                  name=""
+                  id=""
+                  className="border-2 w-full rounded-lg p-2"
+                  placeholder="Write something here."
+                ></textarea>
+                <button
+                  className={`block bg-black text-white px-4 py-2 rounded-lg`}
+                >
+                  Send message
+                </button>
+              </div>
             </div>
           </div>
         </div>

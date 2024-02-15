@@ -15,23 +15,32 @@ const lora = Lora({
 
 const Footer = () => {
   return (
-    <footer className="bg-black py-14 mt-16 px-4">
-      <h2 className={`text-4xl text-white ${lora.className}`}>Hem.</h2>
+    <footer className="bg-[#000000] py-14 mt-16 px-4 min-[480px]:px-6 md:px-10 text-white">
+      <div className="max-w-screen-xl m-auto">
+        <h2 className={`text-4xl ${lora.className}`}>Hem.</h2>
 
-      <div className="mt-8 flex flex-row gap-4">
-        {[
-          { site: 'Github', link: 'https://github.com/itshemdev' },
-          { site: 'Twitter', link: 'https://github.com/itshemdev' },
-          { site: 'LinkedIn', link: 'https://github.com/itshemdev' },
-        ].map((item) => (
-          <a
-            key={item.site}
-            href={item.link}
-            className={`text-white text-xl ${roboto.className}`}
-          >
-            {item.site}
-          </a>
-        ))}
+        {/* <a
+          href="mailto:hemsundar.paranthaman@outlook.com"
+          className={`${roboto.className} text-xl mt-6 block`}
+        >
+          hemsundar.paranthaman@outlook.com
+        </a> */}
+
+        <div className="mt-8 flex flex-row gap-4">
+          {[
+            { site: 'Github', link: 'https://github.com/itshemdev' },
+            { site: 'Twitter', link: 'https://github.com/itshemdev' },
+            { site: 'LinkedIn', link: 'https://github.com/itshemdev' },
+          ].map((item) => (
+            <a
+              key={item.site}
+              href={item.link}
+              className={`text-xl ${roboto.className}`}
+            >
+              {item.site}
+            </a>
+          ))}
+        </div>
       </div>
 
       {/* <div>{[{ link: 'https://github.com/itshemdsev', icon:  }]}</div> */}
