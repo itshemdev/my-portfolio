@@ -24,34 +24,35 @@ const HeroSection = () => {
         <div className="flex flex-col gap-12 md:flex-row md:items-center md:justify-between md:gap-10 ">
           <Motion
             className={` 
-              md:basis-7/12
-              font-serif font-normal`}
+            md:basis-7/12
+            font-serif font-normal`}
           >
-            {[
-              "Hey, I'm Hemsundar",
-              'a full-stack developer',
-              'based in India.',
-            ].map((string, index) => (
-              <div key={string} className="overflow-hidden">
-                <Motion
-                  className={`text-3xl leading-[40px] min-[360px]:text-[8vw] min-[390px]:text-[8.9vw]
+            <p className={`${sans.className} text-lg mb-2`}>
+              Full-Stack Developer
+            </p>
+            {['Building bridges between imagination and functionality.'].map(
+              (string, index) => (
+                <div key={string} className="overflow-hidden">
+                  <Motion
+                    className={`text-3xl leading-[40px] min-[360px]:text-[8vw] min-[390px]:text-[8.9vw]
                     min-[390px]:leading-[46px] min-[440px]:leading-[50px]
                     md:text-4xl md:leading-[46px] lg:text-[350%] lg:leading-[68px]
                     ${serif.className}
                     `}
-                  initial={{ y: 60 }}
-                  animate={{
-                    y: 0,
-                    transition: {
-                      delay: 1.5 + index * 0.1,
-                      ease: 'easeInOut',
-                    },
-                  }}
-                >
-                  {string}
-                </Motion>
-              </div>
-            ))}
+                    initial={{ y: 60 }}
+                    animate={{
+                      y: 0,
+                      transition: {
+                        delay: 1.5 + index * 0.1,
+                        ease: 'easeInOut',
+                      },
+                    }}
+                  >
+                    {string}
+                  </Motion>
+                </div>
+              )
+            )}
 
             <div className="overflow-hidden">
               <Motion
