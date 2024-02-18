@@ -28,7 +28,7 @@ const HeroSection = () => {
             font-serif font-normal`}
           >
             <p className={`${sans.className} text-lg mb-2`}>
-              Full-Stack Developer
+              Hemsundar Paranthaman - Full-Stack Developer
             </p>
             <div>
               {[
@@ -39,7 +39,7 @@ const HeroSection = () => {
                 <div key={string} className="overflow-hidden">
                   <Motion
                     className={`text-3xl leading-[40px] min-[360px]:text-[8vw] min-[390px]:text-[8.9vw]
-                    min-[390px]:leading-[46px] min-[440px]:leading-[50px]
+                    min-[390px]:leading-[48px] min-[440px]:leading-[50px]
                     md:text-3xl md:leading-[46px] lg:text-[350%] lg:leading-[68px] md:hidden
                     ${serif.className}
                     `}
