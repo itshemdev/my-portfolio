@@ -4,6 +4,7 @@ import Footer from './_components/footer';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://itshem.dev'),
   title: {
     absolute: 'Hem | Developer',
     default: "'Hem | Developer'",
