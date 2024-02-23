@@ -29,8 +29,11 @@ const Footer = () => {
         <div className="mt-8 flex flex-row gap-4">
           {[
             { site: 'Github', link: 'https://github.com/itshemdev' },
-            { site: 'Twitter', link: 'https://github.com/itshemdev' },
-            { site: 'LinkedIn', link: 'https://github.com/itshemdev' },
+            { site: 'Twitter', link: 'https://twitter.com/itshemdev' },
+            {
+              site: 'LinkedIn',
+              link: 'https://www.linkedin.com/in/hemsundar-paranthaman-a65938234/',
+            },
           ].map((item) => (
             <a
               key={item.site}
