@@ -111,7 +111,7 @@ const HeroSection = () => {
           </div>
 
           <div className="flex justify-center w-full md:basis-5/12">
-            <div className="relative w-full aspect-[2034/2928] max-w-[750px] max-h-[600px] overflow-hidden">
+            <div className="relative w-full aspect-[2034/2928] max-w-[750px] max-h-[700px] overflow-hidden">
               <Motion
                 className="w-full h-full bg-white absolute z-[100]"
                 initial={{ height: '100%' }}

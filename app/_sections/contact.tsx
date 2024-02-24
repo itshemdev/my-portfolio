@@ -1,6 +1,9 @@
+'use client';
+
 import { Lora, Roboto } from 'next/font/google';
 import Line from '../_components/line';
 import Image from 'next/image';
+import { useFormik } from 'formik';
 
 const roboto = Roboto({
   weight: ['400'],
@@ -22,6 +25,17 @@ const serif = Lora({
 });
 
 const ContactSection = () => {
+  const formik = useFormik({
+    initialValues: {
+      name: '',
+      email: '',
+      message: '',
+    },
+    onSubmit: (values) => {
+      console.log(values);
+    },
+  });
+
   return (
     <section className="px-4 min-[480px]:px-6 md:px-10">
       <div className="max-w-screen-xl m-auto">
@@ -34,7 +48,11 @@ const ContactSection = () => {
               fill
             />
           </div>
-          <div className="basis-full md:basis-5/12 lg:p-10">
+          <form
+            className="basis-full md:basis-5/12 lg:p-10"
+            action="https://usebasin.com/f/253e69c15bce"
+            method="POST"
+          >
             <h1 className="text-4xl lg:text-5xl">Get In Touch.</h1>
             <p className={`${roboto.className} mt-2`}>
               I would love to collaborate for something.
@@ -42,17 +60,21 @@ const ContactSection = () => {
 
             <div className={`mt-10 flex flex-col  gap-4 ${roboto.className}`}>
               <input
+                id="name"
+                name="name"
                 type="text"
                 placeholder="Name"
                 className={`border-2 rounded-lg p-2 w-full `}
               />
               <input
+                id="email"
+                name="email"
                 type="email"
-                placeholder="Mail"
+                placeholder="Email"
                 className={`border-2 rounded-lg p-2 w-full ${roboto.className}`}
               />
               <textarea
-                name=""
+                name="description"
                 id=""
                 className="border-2 w-full rounded-lg p-2"
                 placeholder="Write something here."
@@ -63,7 +85,7 @@ const ContactSection = () => {
                 Send message
               </button>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </section>
