@@ -1,6 +1,7 @@
 import '../styles/globals.css';
 import { Analytics } from '@vercel/analytics/react';
 import { Metadata } from 'next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://itshem.dev'),
@@ -32,6 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <SpeedInsights />
         <Analytics />
         {/* <Header /> */}
         {children}
