@@ -18,6 +18,9 @@ const Motion = ({
 }) => {
   return (
     <motion.div
+      style={{
+        fontFamily: 'Times',
+      }}
       initial={initial}
       className={className}
       whileHover={whileHover}

@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Lora, Roboto } from 'next/font/google';
-import myPic from './../../public/hemsundar-paranthaman-1.png';
+import myPic from './../../public/hemsundar-paranthaman-3.jpg';
 import Motion from '../_components/motion';
 
 const sans = Roboto({
@@ -57,7 +57,7 @@ const HeroSection = () => {
                 </div>
               ))}
             </div>
-
+            {/* ${serif.className} */}
             <div>
               {[
                 'Building bridges between',
@@ -69,7 +69,6 @@ const HeroSection = () => {
                     className={`hidden md:flex text-3xl leading-[40px] min-[360px]:text-[8vw] min-[390px]:text-[8.9vw]
                     min-[390px]:leading-[46px] min-[440px]:leading-[50px]
                     md:text-3xl md:leading-[46px] lg:text-[350%] lg:leading-[68px]
-                    ${serif.className}
                     `}
                     initial={{ y: 60 }}
                     animate={{
@@ -85,7 +84,6 @@ const HeroSection = () => {
                 </div>
               ))}
             </div>
-
             {/* <Motion
               initial={{ y: 60 }}
               className={`text-3xl leading-[40px] min-[360px]:text-[8vw] min-[390px]:text-[8.9vw]
@@ -95,7 +93,6 @@ const HeroSection = () => {
             >
               Building bridges between imagination and functionality.
             </Motion> */}
-
             <div className="overflow-hidden">
               <Motion
                 className={`text-xl mt-8 opacity-80 font-serif ${sans.className} font-normal xl:text-2xl`}
@@ -143,7 +140,7 @@ const HeroSection = () => {
         </div>
 
         <div
-          className={`${sans.className} text-lg mt-10 opacity-90 md:text-xl  md:mt-20 lg:text-2xl lg:leading-[40px] lg:max-w-[80%] m-auto`}
+          className={`${sans.className} text-lg mt-10 opacity-90 md:text-xl  md:mt-20 lg:text-2xl lg:leading-[40px] lg:max-w-[80%]`}
         >
           <p className={``}>
             I'm a budding computer application student with two years of
