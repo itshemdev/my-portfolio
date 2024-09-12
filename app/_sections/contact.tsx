@@ -43,7 +43,7 @@ const ContactSection = () => {
         <div className="flex items-center gap-20">
           <div className="relative hidden basis-5/12 aspect-square md:flex overflow-hidden rounded-full">
             <Image
-              src={'/hemsundar-paranthaman-2.jpeg'}
+              src={'/jean-philippe-delberghe-75xPHEQBmvA-unsplash.jpg'}
               alt="Photo of Hemsundar Paranthaman."
               fill
             />

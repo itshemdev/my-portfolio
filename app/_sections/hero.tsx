@@ -140,21 +140,55 @@ const HeroSection = () => {
         </div>
 
         <div
-          className={`${sans.className} text-lg mt-10 opacity-90 md:text-xl  md:mt-20 lg:text-2xl lg:leading-[40px] lg:max-w-[80%]`}
+          className={`${sans.className} text-lg mt-10 opacity-90 md:text-xl  md:mt-20 lg:text-2xl lg:leading-[40px] lg:max-w-[80%] flex flex-col gap-6 md:gap-8`}
         >
           <p className={``}>
-            I'm a budding computer application student with two years of
-            freelance web development experience. My heart beats for technology,
-            as I strive to stay ahead of the curve, constantly learning and
-            innovating to make a mark in this dynamic field.
+            I'm Hemsundar Paranthaman, a passionate developer with expertise in
+            both front-end and back-end technologies. My programming journey
+            began in 11th grade, focusing on React.js, Next.js, and Redux. After
+            completing 12th grade, I joined JadeCore, where I contributed to
+            SaaS applications and expanded into back-end work with Node.js,
+            Express, and MySQL.
+          </p>
+          <p>
+            Currently, I work part-time as both a developer at JadeCore and an
+            eCommerce Analyst at BuildDirect, a leading platform based in
+            Vancouver. I leverage my technical skills to enhance eCommerce
+            strategies and build impactful, user-centric solutions.
+          </p>
+          {/* <p>
+            In addition to my role at JadeCore, I took on a new challenge as an
+            eCommerce Analyst at BuildDirect, a prominent eCommerce platform
+            headquartered in Vancouver, Canada, that serves customers across the
+            US. In this role, I leverage my technical background to analyze and
+            enhance eCommerce strategies, bridging the gap between technical
+            development and business objectives.
+          </p>
+          <p>
+            With a strong foundation in both front-end and back-end development
+            and a keen analytical mindset, I am driven by the desire to create
+            impactful and user-centric solutions. I am always eager to learn and
+            grow, embracing new challenges and opportunities in the tech world.
+          </p> */}
+          <p>
+            If you'd like to learn more about my experience, feel free to check
+            out my
+            <Link
+              href={'/pdfs/hemsundar_paranthaman_resume.pdf'}
+              className="text-green-600"
+            >
+              {' '}
+              resume.{' '}
+            </Link>
+            I’m always open to networking and collaboration!
           </p>
 
-          <Link
+          {/* <Link
             href={'/pdfs/hemsundar_paranthaman_resume.pdf'}
             className={`mt-6 block ${sans.className}`}
           >
             Wanna look at my Resume? <b>Click here.</b>
-          </Link>
+          </Link> */}
         </div>
       </div>
     </section>
