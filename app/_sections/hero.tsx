@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Lora, Roboto } from 'next/font/google';
-import myPic from './../../public/hemsundar-paranthaman-3.jpg';
+import myPic from './../../public/hemsundar-paranthaman-4.jpg';
 import Motion from '../_components/motion';
 
 const sans = Roboto({
