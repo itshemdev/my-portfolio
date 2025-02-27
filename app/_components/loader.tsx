@@ -23,7 +23,7 @@ const Loader = () => {
     <AnimatePresence>
       {loading && (
         <motion.div
-          className={`${serif.className} absolute h-screen w-screen z-[1000] top-0 bg-black before:content-['Loading...!'] 
+          className={`${serif.className} absolute h-screen w-screen z-1000 top-0 bg-black before:content-['Loading...!'] 
             before:text-white before:absolute before:text-2xl before:bottom-20 before:right-10`}
           initial={{ top: 0 }}
           exit={{

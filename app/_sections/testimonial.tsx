@@ -23,7 +23,7 @@ const serif = Lora({
 const TestimonialSection = () => {
   return (
     <section className="px-4 min-[480px]:p-6 md:px-10">
-      <div className="max-w-screen-xl m-auto">
+      <div className="max-w-(--breakpoint-xl) m-auto">
         <Line className="mt-12" />
         <h2 className={`text-3xl lg:text-4xl mt-12 ${serif.variable}`}>
           Testimonials

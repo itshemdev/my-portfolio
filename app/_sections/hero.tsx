@@ -20,7 +20,7 @@ const serif = Lora({
 const HeroSection = () => {
   return (
     <section className="pt-36 px-4 text-left w-full min-[480px]:px-6 md:pt-20 md:px-10">
-      <div className="max-w-screen-xl m-auto">
+      <div className="max-w-(--breakpoint-xl) m-auto">
         <div className="flex flex-col gap-12 md:flex-row md:items-center md:justify-between md:gap-10 ">
           <div
             className={` 
@@ -108,9 +108,9 @@ const HeroSection = () => {
           </div>
 
           <div className="flex justify-center w-full md:basis-5/12">
-            <div className="relative w-full aspect-[2034/2928] max-w-[750px] max-h-[700px] overflow-hidden">
+            <div className="relative w-full aspect-2034/2928 max-w-[750px] max-h-[700px] overflow-hidden">
               <Motion
-                className="w-full h-full bg-white absolute z-[100]"
+                className="w-full h-full bg-white absolute z-100"
                 initial={{ height: '100%' }}
                 animate={{
                   height: 0,

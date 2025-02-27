@@ -38,7 +38,7 @@ const ContactSection = () => {
 
   return (
     <section className="px-4 min-[480px]:px-6 md:px-10">
-      <div className="max-w-screen-xl m-auto">
+      <div className="max-w-(--breakpoint-xl) m-auto">
         <Line className="mb-16 mt-16" />
         <div className="flex items-center gap-20">
           <div className="relative hidden basis-5/12 aspect-square md:flex overflow-hidden rounded-full">

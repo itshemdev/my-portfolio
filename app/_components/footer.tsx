@@ -16,7 +16,7 @@ const lora = Lora({
 const Footer = () => {
   return (
     <footer className="bg-[#000000] py-14 mt-16 px-4 min-[480px]:px-6 md:px-10 text-white">
-      <div className="max-w-screen-xl m-auto">
+      <div className="max-w-(--breakpoint-xl) m-auto">
         <h2 className={`text-4xl ${lora.className}`}>Hem.</h2>
 
         {/* <a
