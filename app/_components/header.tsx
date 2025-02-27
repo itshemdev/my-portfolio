@@ -1,7 +1,7 @@
 'use client';
 
 import Padding from './padding';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 
 const Header = () => {
   return (

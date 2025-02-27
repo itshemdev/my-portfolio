@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import { Roboto } from 'next/font/google';
-import { motion } from 'framer-motion';
 import Motion from './motion';
 
 const roboto = Roboto({

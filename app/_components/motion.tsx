@@ -1,7 +1,7 @@
 'use client';
 
 import { ReactNode } from 'react';
-import { AnimationProps, motion } from 'framer-motion';
+import { AnimationProps, motion } from 'motion/react';
 
 const Motion = ({
   children,
