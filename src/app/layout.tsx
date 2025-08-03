@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     siteName: "Hem | Software Engineer",
     images: [
       {
-        url: "/open-graph-image.png",
+        url: "https://itshem.dev/open-graph--image.jpeg",
         width: 1200,
         height: 630,
         alt: "Hem | Software Engineer",
