@@ -11,7 +11,23 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Hem | Software Engineer",
   description:
-    "A passionate developer with expertise in both front-end and back-end technologies.",
+    "Helping businesses grow online through modern web apps, custom WordPress & Shopify solutions, and digital products crafted to elevate your brand.",
+  openGraph: {
+    type: "website",
+    title: "Hem | Software Engineer",
+    description:
+      "Helping businesses grow online through modern web apps, custom WordPress & Shopify solutions, and digital products crafted to elevate your brand.",
+    url: "https://itshem.dev",
+    siteName: "Hem | Software Engineer",
+    images: [
+      {
+        url: "/open-graph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Hem | Software Engineer",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({

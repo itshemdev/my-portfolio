@@ -13,7 +13,7 @@ const Works = () => {
       link: "https://the-awm.com",
     },
     {
-      title: "The AWM",
+      title: "All DigiApp",
       image: "/all-digiapp-compressed.jpeg",
       link: "https://all-digiapp.com",
     },
