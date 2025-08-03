@@ -15,7 +15,7 @@ const Testimonials = () => {
     },
     {
       name: "Abel Dharmaraj",
-      company: "BuildDirect",
+      company: "JadeCore",
       position: "Senior Software Engineer",
       testimonial: `I had the pleasure of working with Hemsundar, and I was consistently impressed by his strong programming foundation and commitment to best practices. He has a clear passion for learning and doesn't hesitate to explore new technologies. Whether it was working with JavaScript, React, or Node.js, he always approached tasks with curiosity and a drive to solve challenges efficiently. His attitude and growth mindset make him a valuable asset to any development team.`,
     },
