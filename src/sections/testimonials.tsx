@@ -1,11 +1,15 @@
 "use client";
 
-import { useState } from "react";
+import { PropsWithChildren, useState } from "react";
 import Card from "@/components/card";
 import CardTitle from "@/components/cardTitle";
 import Text from "@/components/text";
 
-const Testimonials = () => {
+type TestimonialsProps = {
+  className?: string;
+};
+
+const Testimonials = ({ className }: TestimonialsProps) => {
   const testimonials = [
     {
       name: "Amrisha Rajkowa",
@@ -58,7 +62,7 @@ const Testimonials = () => {
   };
 
   return (
-    <Card>
+    <Card className={`${className}`}>
       <CardTitle>Testimonials</CardTitle>
       <div className="mt-6 flex flex-col gap-6">
         {testimonials.map((item, index) => (

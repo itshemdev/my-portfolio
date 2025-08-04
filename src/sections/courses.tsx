@@ -32,7 +32,7 @@ const Courses = () => {
   ];
 
   return (
-    <Card>
+    <Card className="!bg-[#FD34C1]">
       <CardTitle>Courses</CardTitle>
       <div className="mt-6 flex flex-col gap-6">
         {courses.map((item, index) => (

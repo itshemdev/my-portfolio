@@ -14,11 +14,11 @@ export default function Home() {
         <Column className="">
           <About />
           <Experience className={"md:hidden"} />
-          <Testimonials />
+          <Testimonials className={"!bg-[#F2AA47] text-[#222]"} />
           <Skills />
         </Column>
         <Column>
-          <Experience className={"hidden md:block"} />
+          <Experience className={"hidden md:block !bg-[#867CE1]"} />
 
           <Courses />
         </Column>
