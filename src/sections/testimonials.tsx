@@ -50,7 +50,7 @@ const Testimonials = ({ className }: TestimonialsProps) => {
             : item.testimonial.slice(0, 400)}{" "}
           {!readmore && (
             <button
-              className="opacity-100 text-white underline"
+              className="opacity-100 text-foreground underline"
               onClick={() => setReadmore(!readmore)}
             >
               Read More...
