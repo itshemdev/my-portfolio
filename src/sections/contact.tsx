@@ -1,42 +1,43 @@
+"use client";
+
 import Card from "@/components/card";
 import CardTitle from "@/components/cardTitle";
-import Arrow from "@/components/arrow";
+import Text from "@/components/text";
+import Link from "next/link";
 
 const Contact = () => {
-  const links = [
-    {
-      title: "Mail",
-      href: "mailto:hemsundar.paranthaman@outlook.com",
-    },
-    {
-      title: "Github",
-      href: "https://github.com/itshemdev",
-    },
-    {
-      title: "LinkedIn",
-      href: "https://www.linkedin.com/in/hemsundar-paranthaman/",
-    },
-    {
-      title: "X",
-      href: "https://x.com/hemmssss",
-    },
-  ];
+  const copyToClipboard = () => {
+    navigator.clipboard
+      .writeText("hemsundar.paranthaman@outlook.com")
+      .then(() => {
+        console.log("Text copied to clipboard");
+      })
+      .catch((err) => {
+        console.error("Failed to copy: ", err);
+      });
+  };
 
   return (
     <Card>
       <CardTitle>Contact</CardTitle>
-      <div className="grid grid-cols-2 gap-2 mt-4">
-        {links.map((link, index) => (
-          <a
-            key={index}
-            href={link.href}
-            className="underline hover:underline flex items-center gap-2 text-sm mt-2"
-          >
-            {link.title}
-            <Arrow />
-          </a>
-        ))}
-      </div>
+      <Text className="mt-6">
+        You can always reach me at{" "}
+        <button
+          onClick={copyToClipboard}
+          className="underline text-foreground opacity-100"
+        >
+          hemsundar.paranthaman@outlook.com
+        </button>
+        , or connect with me through{" "}
+        <Link
+          href="https://breezyworks.com"
+          className="underline opacity-100 text-foreground"
+          target="_blank"
+        >
+          breezyworks.com
+        </Link>
+        .
+      </Text>
     </Card>
   );
 };

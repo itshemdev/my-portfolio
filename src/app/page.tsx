@@ -6,6 +6,9 @@ import About from "@/sections/about";
 import Courses from "@/sections/courses";
 import Skills from "@/sections/skills";
 import Works from "@/sections/works";
+import Languages from "@/sections/languages";
+import Education from "@/sections/education";
+import Handles from "@/sections/handles";
 
 export default function Home() {
   return (
@@ -16,11 +19,13 @@ export default function Home() {
           <Experience className={"md:hidden"} />
           <Testimonials />
           <Skills />
+          <Education />
         </Column>
         <Column>
           <Experience className={"hidden md:block"} />
 
           <Courses />
+          <Languages />
         </Column>
       </div>
       <Works />
@@ -28,7 +33,9 @@ export default function Home() {
         <Column className="">
           <Contact />
         </Column>
-        <Column></Column>
+        <Column>
+          <Handles />
+        </Column>
       </div>
     </div>
   );
