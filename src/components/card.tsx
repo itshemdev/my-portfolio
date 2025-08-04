@@ -5,9 +5,7 @@ type CardProps = {
 
 const Card = ({ children, className }: CardProps) => {
   return (
-    <div
-      className={`relative p-5 rounded-3xl bg-[#222] w-full z-10 ${className}`}
-    >
+    <div className={`relative card p-5 rounded-3xl w-full z-10 ${className}`}>
       {children}
     </div>
   );
