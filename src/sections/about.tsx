@@ -20,11 +20,11 @@ const About = () => {
       </div>
 
       <Text className="mt-6">
-        A passionate developer with expertise in both front-end and back-end
-        technologies. My programming journey began in 11th grade, focusing on
-        React.js, Next.js, and Redux. After completing 12th grade, I joined
-        JadeCore, where I contributed to SaaS applications and expanded into
-        back-end work with Node.js, Express, and MySQL.
+        A developer passionate about crafting fast, modern, and user‑friendly
+        websites. I enjoy transforming ideas into digital products that help
+        businesses grow — from sleek marketing sites to custom eCommerce
+        solutions. Beyond just writing code, I focus on thoughtful design, clean
+        user experiences, and building things that feel polished and purposeful.
       </Text>
     </Card>
   );
