@@ -24,14 +24,14 @@ const Contact = () => {
         You can always reach me at{" "}
         <button
           onClick={copyToClipboard}
-          className="underline text-foreground opacity-100"
+          className="underline hover:italic text-foreground opacity-100"
         >
           hemsundar.paranthaman@outlook.com
         </button>
         , or connect with me through{" "}
         <Link
           href="https://breezyworks.com"
-          className="underline opacity-100 text-foreground"
+          className="underline hover:italic opacity-100 text-foreground"
           target="_blank"
         >
           breezyworks.com

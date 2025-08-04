@@ -34,7 +34,13 @@ const Experience = ({ className }: { className?: string }) => {
       <div className="mt-6 flex flex-col gap-4">
         {experience.map((item, index) => (
           <div key={index} className="flex text-sm">
-            <span className="w-[35%] opacity-70">{item.date}</span>
+            <span
+              className={`w-[35%] opacity-70 ${
+                item.date === "Present" && "text-blue-500 opacity-100"
+              }`}
+            >
+              {item.date}
+            </span>
             <div className="w-[65%] flex flex-col gap-2">
               <h3>{item.title}</h3>
               <Link
