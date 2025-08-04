@@ -35,7 +35,7 @@ const Experience = ({ className }: { className?: string }) => {
         {experience.map((item, index) => (
           <div key={index} className="flex text-sm">
             <span className="w-[35%] opacity-70">{item.date}</span>
-            <div className="w-[65%] flex flex-col gap-1">
+            <div className="w-[65%] flex flex-col gap-2">
               <h3>{item.title}</h3>
               <Link
                 href={item.link}
