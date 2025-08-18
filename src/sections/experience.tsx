@@ -24,7 +24,7 @@ const Experience = ({ className }: { className?: string }) => {
       title: "Technical Analyst",
       company: "JadeCore",
       location: "Tamil Nadu, India",
-      link: "https://jadecore.com",
+      link: "https://jadecore.in",
     },
   ];
 
