@@ -24,5 +24,13 @@
     "eslint": "^10.0.2",
     "eslint-config-next": "16.1.6",
     "@eslint/eslintrc": "^3.3.4"
-  }
+  },
+  "ignoreScripts": [
+    "sharp",
+    "unrs-resolver"
+  ],
+  "trustedDependencies": [
+    "sharp",
+    "unrs-resolver"
+  ]
 }
