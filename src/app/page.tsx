@@ -31,7 +31,7 @@ export default function Home() {
       {showLoader ? (
         <motion.div
           key="loader"
-          className="fixed inset-0 z-50 rounded-2xl p-6 bg-gray-100 flex items-center justify-center"
+          className="fixed inset-0 z-50 rounded-2xl p-6 flex items-center justify-center"
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: FADE_DURATION_S, ease: "easeInOut" }}
