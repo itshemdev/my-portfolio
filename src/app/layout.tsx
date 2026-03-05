@@ -18,11 +18,11 @@ export const metadata: Metadata = {
     title: "Hem | Software Engineer",
     description:
       "Helping businesses grow online through modern web apps, custom WordPress & Shopify solutions, and digital products crafted to elevate your brand.",
-    url: "https://itshem.dev",
+    url: "https://hemsundar.com",
     siteName: "Hem | Software Engineer",
     images: [
       {
-        url: "https://itshem.dev/open-graph--image.jpeg",
+        url: "https://hemsundar.com/open-graph--image.jpeg",
         width: 1200,
         height: 630,
         alt: "Hem | Software Engineer",
