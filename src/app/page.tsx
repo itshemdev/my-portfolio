@@ -9,8 +9,19 @@ import Works from "@/sections/works";
 import Languages from "@/sections/languages";
 import Education from "@/sections/education";
 import Handles from "@/sections/handles";
+import { Signature } from "@/components/signature";
 
 export default function Home() {
+  return (
+    <div className="rounded-2xl p-6 bg-gray-100 h-dvh w-screen flex items-center justify-center">
+      <Signature
+        text="Hem."
+        fontSize={16}
+        color="#0156FE"
+      />
+    </div>
+  )
+
   return (
     <div className="max-w-[1100px] mx-auto gap-4 py-4 px-4">
       <div className="flex flex-col md:flex-row gap-4">
