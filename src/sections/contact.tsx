@@ -28,14 +28,6 @@ const Contact = () => {
         >
           hemsundar.paranthaman@outlook.com
         </button>
-        , or connect with me through{" "}
-        <Link
-          href="https://breezyworks.com"
-          className="underline hover:italic opacity-100 text-foreground"
-          target="_blank"
-        >
-          breezyworks.com
-        </Link>
         .
       </Text>
     </Card>

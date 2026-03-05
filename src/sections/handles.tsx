@@ -12,10 +12,6 @@ const Handles = () => {
       title: "LinkedIn",
       href: "https://www.linkedin.com/in/hemsundar-paranthaman/",
     },
-    {
-      title: "X",
-      href: "https://x.com/hemmssss",
-    },
   ];
 
   return (
