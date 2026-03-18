@@ -53,18 +53,18 @@ export default function Home() {
               <Testimonials />
               <Skills />
               <Education />
+              <Contact />
             </Column>
             <Column>
               <Experience className={"hidden md:block"} />
               <Courses />
               <Languages />
+              <Handles />
             </Column>
           </div>
-          <Works />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-            <Contact />
-            <Handles />
-          </div>
+          {/* <Works /> */}
+          {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+          </div> */}
         </motion.div>
       )}
     </AnimatePresence>
