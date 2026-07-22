@@ -22,7 +22,7 @@ const About = () => {
       <Text className="mt-6">
         A developer passionate about crafting fast, modern, and user‑friendly
         websites. I enjoy transforming ideas into digital products that help
-        businesses grow — from sleek marketing sites to custom eCommerce
+        businesses grow from sleek marketing sites to custom eCommerce
         solutions. Beyond just writing code, I focus on thoughtful design, clean
         user experiences, and building things that feel polished and purposeful.
       </Text>
